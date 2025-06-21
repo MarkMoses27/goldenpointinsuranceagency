@@ -18,8 +18,7 @@ import ContactPage from './components/pages/ContactPage'
 import AboutPage from './components/pages/AboutPage';
 
 //Homepage
-import HeroSection from './components/HeroSection';
-import AboutUs from './components/AboutUs'
+import HomePage from './components/home/HomePage';
 
 export default function App() {
   return (
@@ -41,8 +40,7 @@ export default function App() {
         {/* Add more routes as needed */}
       </Routes>
       {/* Homepage */}
-      <HeroSection />
-      <AboutUs />
+      <HomePage />
       
       {/* Footer */}
       <Footer />

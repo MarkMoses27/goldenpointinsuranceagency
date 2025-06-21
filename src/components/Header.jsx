@@ -1,35 +1,35 @@
-import { useState } from 'react'
-import { Link } from 'react-router-dom'
-import Logo from '../assets/logo.png'
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import Logo from '../assets/logo.png';
 
+// Services and Partners data
 const services = [
-  { name: 'Motor Insurance',   path: '/motor' },
+  { name: 'Motor Insurance', path: '/motor' },
   { name: 'Health Insurance', path: '/health' },
-  { name: 'Life Insurance',    path: '/life' },
-  { name: 'WIBA',              path: '/wiba' },
-  { name: 'Asset Management',  path: '/asset' },
-  { name: 'Domestic Package',  path: '/domestic' },
-  { name: 'Travel Insurance',  path: '/travel' },
-  { name: 'Pensions',          path: '/pensions' },
-]
+  { name: 'Life Insurance', path: '/life' },
+  { name: 'WIBA', path: '/wiba' },
+  { name: 'Asset Management', path: '/asset' },
+  { name: 'Domestic Package', path: '/domestic' },
+  { name: 'Travel Insurance', path: '/travel' },
+  { name: 'Pensions', path: '/pensions' },
+];
 
 const partners = [
-  { name: 'Jubilee Insurance',      path: '/partners/jubilee' },
-  { name: 'AAR Insurance',          path: '/partners/aar' },
-  { name: 'Resolution Insurance',   path: '/partners/resolution' },
-  { name: 'Madison Insurance',      path: '/partners/madison' },
-  { name: 'Britam Insurance',       path: '/partners/britam' },
-  { name: 'CIC Insurance',          path: '/partners/cic' },
-  { name: 'ICEA LION',              path: '/partners/icea' },
-]
+  { name: 'Jubilee Insurance', path: '/partners/jubilee' },
+  { name: 'AAR Insurance', path: '/partners/aar' },
+  { name: 'Resolution Insurance', path: '/partners/resolution' },
+  { name: 'Madison Insurance', path: '/partners/madison' },
+  { name: 'Britam Insurance', path: '/partners/britam' },
+  { name: 'CIC Insurance', path: '/partners/cic' },
+  { name: 'ICEA LION', path: '/partners/icea' },
+];
 
 export default function Header() {
-  const [mobileOpen, setMobileOpen] = useState(false)
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
     <header className="bg-white border-b border-gray-100">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-        
         {/* Logo */}
         <Link to="/" className="flex items-center space-x-3">
           <div className="relative">
@@ -61,7 +61,7 @@ export default function Header() {
             </svg>
             <div className="invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-opacity duration-200 absolute top-full left-0 mt-3 bg-white rounded-xl shadow-xl border border-gray-100 w-64 z-50 overflow-hidden">
               <div className="p-2">
-                {services.map(s => (
+                {services.map((s) => (
                   <Link
                     key={s.path}
                     to={s.path}
@@ -95,7 +95,7 @@ export default function Header() {
                 <h3 className="px-4 py-2 text-xs font-semibold text-amber-700 uppercase tracking-wide border-b border-gray-100">
                   Insurance Partners
                 </h3>
-                {partners.map(p => (
+                {partners.map((p) => (
                   <Link
                     key={p.path}
                     to={p.path}
@@ -164,5 +164,5 @@ export default function Header() {
         </div>
       )}
     </header>
-  )
+  );
 }
