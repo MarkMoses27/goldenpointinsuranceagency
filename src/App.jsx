@@ -16,12 +16,20 @@ import TravelInsurancePage from './components/pages/TravelInsurancePage'
 import PensionsPage from './components/pages/PensionsPage'
 import ContactPage from './components/pages/ContactPage'
 import AboutPage from './components/pages/AboutPage'
+import Hero from './components/Hero'
+import AboutUs from './components/AboutUs'
 export default function App() {
   return (
     <BrowserRouter>
       <Header />
       <Routes>
         {/* Home Page */}
+        <Route path="/" element={
+          <>
+            <Hero />
+            <AboutUs />
+          </>
+        } />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/motor" element={<MotorInsurancePage />} />
