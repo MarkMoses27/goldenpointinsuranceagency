@@ -15,16 +15,13 @@ import DomesticPackagePage from './components/pages/DomesticPackagePage'
 import TravelInsurancePage from './components/pages/TravelInsurancePage'
 import PensionsPage from './components/pages/PensionsPage'
 import ContactPage from './components/pages/ContactPage'
-import AboutPage from './components/pages/AboutPage';
-
-//Homepage
-import HomePage from './components/home/HomePage';
-
+import AboutPage from './components/pages/AboutPage'
 export default function App() {
   return (
     <BrowserRouter>
       <Header />
       <Routes>
+        {/* Home Page */}
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/motor" element={<MotorInsurancePage />} />
@@ -39,8 +36,6 @@ export default function App() {
         
         {/* Add more routes as needed */}
       </Routes>
-      {/* Homepage */}
-      <HomePage />
       
       {/* Footer */}
       <Footer />
