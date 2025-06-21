@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 
 export default function Homepage() {
-  const [mobileOpen, setMobileOpen] = useState(false);
+  // const [mobileOpen, setMobileOpen] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [isScrolled, setIsScrolled] = useState(false);
+  // const [isScrolled, setIsScrolled] = useState(false);
 
   const heroSlides = [
     {
@@ -41,97 +41,18 @@ export default function Homepage() {
   }, []);
 
   // Handle scroll for header background
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     setIsScrolled(window.scrollY > 20);
+  //   };
+  //   window.addEventListener('scroll', handleScroll);
+  //   return () => window.removeEventListener('scroll', handleScroll);
+  // }, []);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-gray-100">
       {/* Header */}
-      <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? 'bg-white/95 backdrop-blur-xl shadow-xl border-b border-gray-200/50' 
-          : 'bg-white/80 backdrop-blur-md border-b border-white/20'
-      }`}>
-        <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-          
-          {/* Logo */}
-          <div className="flex items-center space-x-3 group">
-            <div className="relative">
-              <div className="w-14 h-14 bg-gradient-to-br from-amber-500 via-amber-600 to-orange-600 rounded-2xl flex items-center justify-center shadow-lg transform transition-transform group-hover:scale-105">
-                <span className="text-white font-black text-xl tracking-tight">GP</span>
-              </div>
-              <div className="absolute -top-1 -right-1 w-4 h-4 bg-amber-500 rounded-full border-2 border-white animate-pulse"></div>
-            </div>
-            <div>
-              <span className="text-2xl font-black text-gray-900 block tracking-tight">Golden Point</span>
-              <span className="text-xs text-amber-600 uppercase tracking-widest font-semibold">Insurance Agency</span>
-            </div>
-          </div>
-
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-10">
-            {['Home', 'Services', 'Partners', 'About', 'Contact'].map((item) => (
-              <a
-                key={item}
-                href={item === 'Home' ? '#' : `#${item.toLowerCase()}`}
-                className="relative text-gray-700 hover:text-amber-700 transition-all duration-300 py-2 font-semibold group"
-              >
-                {item}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-amber-500 to-orange-600 transition-all duration-300 group-hover:w-full"></span>
-              </a>
-            ))}
-          </nav>
-
-          {/* Get A Quote Button */}
-          <div className="hidden lg:flex">
-            <button className="bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white px-6 py-3 rounded-xl font-bold text-sm transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center group">
-              <svg className="w-4 h-4 mr-2 transition-transform group-hover:rotate-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-              </svg>
-              GET A QUOTE
-            </button>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setMobileOpen(!mobileOpen)}
-            className="lg:hidden p-3 rounded-xl hover:bg-gray-100/80 transition-all duration-300 transform hover:scale-105"
-          >
-            <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              {mobileOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              )}
-            </svg>
-          </button>
-        </div>
-
-        {/* Mobile Menu */}
-        {mobileOpen && (
-          <div className="lg:hidden bg-white/95 backdrop-blur-xl border-t border-gray-200/50 shadow-2xl">
-            <div className="px-6 py-6 space-y-4">
-              {['Home', 'Services', 'Partners', 'About', 'Contact'].map((item) => (
-                <a
-                  key={item}
-                  href={item === 'Home' ? '#' : `#${item.toLowerCase()}`}
-                  className="block py-3 text-gray-700 hover:text-amber-700 font-semibold text-lg transition-all duration-300 border-b border-gray-100 last:border-b-0 hover:translate-x-2"
-                >
-                  {item}
-                </a>
-              ))}
-              <button className="w-full py-4 bg-gradient-to-r from-amber-600 to-orange-600 text-white rounded-xl text-center font-bold shadow-lg transform transition-all duration-300 hover:scale-105">
-                GET A QUOTE
-              </button>
-            </div>
-          </div>
-        )}
-      </header>
+      
 
       {/* Hero Section */}
       <section className="relative h-screen overflow-hidden">
@@ -288,3 +209,85 @@ export default function Homepage() {
     </div>
   );
 }
+
+
+/* <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled 
+          ? 'bg-white/95 backdrop-blur-xl shadow-xl border-b border-gray-200/50' 
+          : 'bg-white/80 backdrop-blur-md border-b border-white/20'
+      }`}>
+        <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+          
+          {/* Logo */
+      //     <div className="flex items-center space-x-3 group">
+      //       <div className="relative">
+      //         <div className="w-14 h-14 bg-gradient-to-br from-amber-500 via-amber-600 to-orange-600 rounded-2xl flex items-center justify-center shadow-lg transform transition-transform group-hover:scale-105">
+      //           <span className="text-white font-black text-xl tracking-tight">GP</span>
+      //         </div>
+      //         <div className="absolute -top-1 -right-1 w-4 h-4 bg-amber-500 rounded-full border-2 border-white animate-pulse"></div>
+      //       </div>
+      //       <div>
+      //         <span className="text-2xl font-black text-gray-900 block tracking-tight">Golden Point</span>
+      //         <span className="text-xs text-amber-600 uppercase tracking-widest font-semibold">Insurance Agency</span>
+      //       </div>
+      //     </div>
+
+      //     {/* Desktop Navigation */}
+      //     <nav className="hidden lg:flex items-center space-x-10">
+      //       {['Home', 'Services', 'Partners', 'About', 'Contact'].map((item) => (
+      //         <a
+      //           key={item}
+      //           href={item === 'Home' ? '#' : `#${item.toLowerCase()}`}
+      //           className="relative text-gray-700 hover:text-amber-700 transition-all duration-300 py-2 font-semibold group"
+      //         >
+      //           {item}
+      //           <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-amber-500 to-orange-600 transition-all duration-300 group-hover:w-full"></span>
+      //         </a>
+      //       ))}
+      //     </nav>
+
+      //     {/* Get A Quote Button */}
+      //     <div className="hidden lg:flex">
+      //       <button className="bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white px-6 py-3 rounded-xl font-bold text-sm transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center group">
+      //         <svg className="w-4 h-4 mr-2 transition-transform group-hover:rotate-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      //           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+      //         </svg>
+      //         GET A QUOTE
+      //       </button>
+      //     </div>
+
+      //     {/* Mobile Menu Button */}
+      //     <button
+      //       onClick={() => setMobileOpen(!mobileOpen)}
+      //       className="lg:hidden p-3 rounded-xl hover:bg-gray-100/80 transition-all duration-300 transform hover:scale-105"
+      //     >
+      //       <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      //         {mobileOpen ? (
+      //           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+      //         ) : (
+      //           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+      //         )}
+      //       </svg>
+      //     </button>
+      //   </div>
+
+      //   {/* Mobile Menu */}
+      //   {mobileOpen && (
+      //     <div className="lg:hidden bg-white/95 backdrop-blur-xl border-t border-gray-200/50 shadow-2xl">
+      //       <div className="px-6 py-6 space-y-4">
+      //         {['Home', 'Services', 'Partners', 'About', 'Contact'].map((item) => (
+      //           <a
+      //             key={item}
+      //             href={item === 'Home' ? '#' : `#${item.toLowerCase()}`}
+      //             className="block py-3 text-gray-700 hover:text-amber-700 font-semibold text-lg transition-all duration-300 border-b border-gray-100 last:border-b-0 hover:translate-x-2"
+      //           >
+      //             {item}
+      //           </a>
+      //         ))}
+      //         <button className="w-full py-4 bg-gradient-to-r from-amber-600 to-orange-600 text-white rounded-xl text-center font-bold shadow-lg transform transition-all duration-300 hover:scale-105">
+      //           GET A QUOTE
+      //         </button>
+      //       </div>
+      //     </div>
+      //   )}
+      // </header> */
