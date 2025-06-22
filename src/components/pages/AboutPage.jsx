@@ -12,12 +12,12 @@ const AboutPage = () => {
 
   // Services
   const services = [
-    { id: 1, icon: <FaHeartbeat className="text-red-500" />, title: 'Medical Insurance', description: 'Comprehensive health coverage for individuals and families' },
-    { id: 2, icon: <FaCar className="text-blue-500" />, title: 'Motor Insurance', description: 'Protection for all types of vehicles on Kenyan roads' },
+    { id: 1, icon: <FaHeartbeat className="text-amber-500" />, title: 'Medical Insurance', description: 'Comprehensive health coverage for individuals and families' },
+    { id: 2, icon: <FaCar className="text-amber-500" />, title: 'Motor Insurance', description: 'Protection for all types of vehicles on Kenyan roads' },
     { id: 3, icon: <FaHome className="text-amber-500" />, title: 'Domestic Package', description: 'Home and property insurance solutions' },
-    { id: 4, icon: <FaUserTie className="text-green-500" />, title: 'Life Insurance', description: 'Financial security for your loved ones' },
-    { id: 5, icon: <FaGlobeAfrica className="text-purple-500" />, title: 'WIBA', description: 'Workers Injury Benefits Act coverage' },
-    { id: 6, icon: <FaAward className="text-cyan-500" />, title: 'Pensions', description: 'Retirement planning and wealth management' }
+    { id: 4, icon: <FaUserTie className="text-amber-500" />, title: 'Life Insurance', description: 'Financial security for your loved ones' },
+    { id: 5, icon: <FaGlobeAfrica className="text-amber-500" />, title: 'WIBA', description: 'Workers Injury Benefits Act coverage' },
+    { id: 6, icon: <FaAward className="text-amber-500" />, title: 'Pensions', description: 'Retirement planning and wealth management' }
   ];
 
   // Stats

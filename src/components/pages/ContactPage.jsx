@@ -71,30 +71,30 @@ const ContactPage = () => {
                 href="tel:+254727964113"
                 className="flex items-center gap-3 p-3 rounded-lg bg-amber-50 text-amber-700 font-medium"
               >
-                <FaPhone className="text-amber-500" />
+                <FaPhone className="text-gray-800" />
                 <span>Call Now</span>
               </a>
               <a 
                 href="https://wa.me/254727964113"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 p-3 rounded-lg bg-green-50 text-green-700 font-medium"
+                className="flex items-center gap-3 p-3 rounded-lg bg-green-50 text-amber-700 font-medium"
               >
-                <FaWhatsapp className="text-green-500" />
+                <FaWhatsapp className="text-amber-500" />
                 <span>WhatsApp</span>
               </a>
               <a 
                 href="mailto:goldenpoint.ia@gmail.com"
-                className="flex items-center gap-3 p-3 rounded-lg bg-blue-50 text-blue-700 font-medium"
+                className="flex items-center gap-3 p-3 rounded-lg bg-blue-50 text-amber-700 font-medium"
               >
-                <FaEnvelope className="text-blue-500" />
+                <FaEnvelope className="text-gray-800" />
                 <span>Email Us</span>
               </a>
               <a 
                 href="tel:+254727964113"
-                className="flex items-center gap-3 p-3 rounded-lg bg-red-50 text-red-700 font-medium"
+                className="flex items-center gap-3 p-3 rounded-lg bg-red-50 text-amber-700 font-medium"
               >
-                <FaPhone className="text-red-500" />
+                <FaPhone className="text-gray-800" />
                 <span>Emergency Call</span>
               </a>
             </div>
@@ -162,12 +162,12 @@ const ContactPage = () => {
                 {/* WhatsApp */}
                 <div className="flex flex-wrap items-center p-4 rounded-xl hover:bg-gray-50 transition-colors group">
                   <div className="flex items-center space-x-3 sm:space-x-4 flex-1 min-w-[200px]">
-                    <div className="bg-green-500 group-hover:bg-green-600 p-3 sm:p-4 rounded-full transition-colors">
+                    <div className="bg-amber-500 group-hover:bg-gray-800 p-3 sm:p-4 rounded-full transition-colors">
                       <FaWhatsapp className="text-white text-lg sm:text-xl" />
                     </div>
                     <div>
                       <h3 className="font-bold text-base sm:text-lg text-gray-800">WhatsApp</h3>
-                      <p className="text-green-600 font-semibold text-base sm:text-lg">+254-727-964-113</p>
+                      <p className="text-amber-500 font-semibold text-base sm:text-lg">+254-727-964-113</p>
                       <p className="text-xs sm:text-sm text-gray-500">Quick response guaranteed</p>
                     </div>
                   </div>
@@ -175,7 +175,7 @@ const ContactPage = () => {
                     href="https://wa.me/254727964113"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-3 sm:mt-0 sm:ml-auto bg-green-500 hover:bg-green-600 text-white px-3 py-1.5 sm:px-4 sm:py-2 text-sm sm:text-base rounded-lg transition-colors whitespace-nowrap"
+                    className="mt-3 sm:mt-0 sm:ml-auto bg-amber-500 hover:bg-gray-600 text-white px-3 py-1.5 sm:px-4 sm:py-2 text-sm sm:text-base rounded-lg transition-colors whitespace-nowrap"
                   >
                     Chat
                   </a>
@@ -184,18 +184,18 @@ const ContactPage = () => {
                 {/* Email */}
                 <div className="flex flex-wrap items-center p-4 rounded-xl hover:bg-gray-50 transition-colors group">
                   <div className="flex items-center space-x-3 sm:space-x-4 flex-1 min-w-[200px]">
-                    <div className="bg-blue-500 group-hover:bg-blue-600 p-3 sm:p-4 rounded-full transition-colors">
+                    <div className="bg-amber-500 group-hover:bg-amber-600 p-3 sm:p-4 rounded-full transition-colors">
                       <FaEnvelope className="text-white text-lg sm:text-xl" />
                     </div>
                     <div>
                       <h3 className="font-bold text-base sm:text-lg text-gray-800">Email Us</h3>
-                      <p className="text-blue-600 font-semibold text-sm sm:text-base">goldenpoint.ia@gmail.com</p>
+                      <p className="text-amber-500 font-semibold text-sm sm:text-base">goldenpoint.ia@gmail.com</p>
                       <p className="text-xs sm:text-sm text-gray-500">We'll respond within 24 hours</p>
                     </div>
                   </div>
                   <a 
                     href="mailto:goldenpoint.ia@gmail.com"
-                    className="mt-3 sm:mt-0 sm:ml-auto bg-blue-500 hover:bg-blue-600 text-white px-3 py-1.5 sm:px-4 sm:py-2 text-sm sm:text-base rounded-lg transition-colors whitespace-nowrap"
+                    className="mt-3 sm:mt-0 sm:ml-auto bg-amber-500 hover:bg-amber-600 text-white px-3 py-1.5 sm:px-4 sm:py-2 text-sm sm:text-base rounded-lg transition-colors whitespace-nowrap"
                   >
                     Email
                   </a>
@@ -204,12 +204,12 @@ const ContactPage = () => {
                 {/* Location */}
                 <div className="flex items-center p-4 rounded-xl hover:bg-gray-50 transition-colors group">
                   <div className="flex items-center space-x-3 sm:space-x-4 flex-1">
-                    <div className="bg-red-500 group-hover:bg-red-600 p-3 sm:p-4 rounded-full transition-colors">
+                    <div className="bg-amber-500 group-hover:bg-amber-600 p-3 sm:p-4 rounded-full transition-colors">
                       <FaMapMarkerAlt className="text-white text-lg sm:text-xl" />
                     </div>
                     <div>
                       <h3 className="font-bold text-base sm:text-lg text-gray-800">Visit Us</h3>
-                      <p className="text-red-600 font-semibold text-base sm:text-lg">Nairobi, Kenya</p>
+                      <p className="text-amber-500 font-semibold text-base sm:text-lg">Nairobi, Kenya</p>
                       <p className="text-xs sm:text-sm text-gray-500">Serving clients nationwide</p>
                     </div>
                   </div>
@@ -219,14 +219,14 @@ const ContactPage = () => {
               {/* Emergency Contact */}
               <div className="mt-6 md:mt-8 pt-5 border-t border-gray-200">
                 <div className="bg-red-50 border border-red-200 rounded-lg p-4">
-                  <h4 className="font-bold text-red-800 text-base md:text-lg mb-2">Emergency Claims Support</h4>
-                  <p className="text-red-700 text-xs sm:text-sm mb-3">
+                  <h4 className="font-bold text-red-500 text-base md:text-lg mb-2">Emergency Claims Support</h4>
+                  <p className="text-blue-500 text-xs sm:text-sm mb-3">
                     Need immediate assistance? We're available 24/7 for emergencies
                   </p>
                   <div className="flex flex-col sm:flex-row gap-2">
                     <a 
                       href="tel:+254727964113"
-                      className="bg-red-500 hover:bg-red-600 text-white px-3 py-2 rounded-lg text-center transition-colors text-xs sm:text-sm font-medium"
+                      className="bg-amber-500 hover:bg-amber-600 text-white px-3 py-2 rounded-lg text-center transition-colors text-xs sm:text-sm font-medium"
                     >
                       Emergency Call
                     </a>
@@ -376,7 +376,7 @@ const ContactPage = () => {
         href="https://wa.me/254727964113"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-transform hover:scale-110"
+        className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-800 text-white p-4 rounded-full shadow-lg transition-transform hover:scale-110"
       >
         <FaWhatsapp className="text-xl" />
       </a>

@@ -1,46 +1,68 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function AboutUs() {
+  // Map service titles to route paths
+  const getCoverPath = (title) => {
+    const pathMap = {
+      "MOTOR INSURANCE": "/cover/motor",
+      "MEDICAL INSURANCE": "/cover/health",
+      "LIFE INSURANCE": "/cover/life",
+      "PENSIONS": "/cover/pensions",
+      "ASSET MANAGEMENT": "/cover/asset",
+      "WIBA": "/cover/wiba",
+      "DOMESTIC PACKAGE": "/cover/domestic"
+    };
+    return pathMap[title] || "/cover";
+  };
+
   const services = [
     { 
       title: "MOTOR INSURANCE", 
       description: "Private & Commercial",
+      detailedDescription: "Hit the road with confidence knowing that your vehicle is protected with our reliable motor insurance policies. Whether you're driving for work or leisure, our coverage provides financial security against accidents, theft, and other unforeseen events.",
       image: "https://images.unsplash.com/photo-1566478989037-eec170784d0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       features: ["Comprehensive Coverage", "Third Party Insurance", "Commercial Fleet"]
     },
     { 
       title: "MEDICAL INSURANCE", 
       description: "Individual, SME & Corporates",
+      detailedDescription: "Health is wealth, and we believe in ensuring your well-being through our tailored medical insurance plans. From routine check-ups to unexpected medical emergencies, our comprehensive coverage offers financial protection for you and your loved ones.",
       image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       features: ["Family Plans", "Corporate Schemes", "Outpatient Cover"]
     },
     { 
       title: "LIFE INSURANCE", 
       description: "Secure your family's future",
+      detailedDescription: "Protect your loved ones and secure their future with our customizable life insurance solutions. Whether you're planning for your children's education, paying off debts, or leaving a legacy, our life insurance policies offer financial stability and peace of mind.",
       image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       features: ["Term Life", "Whole Life", "Education Plans"]
     },
     { 
       title: "PENSIONS", 
       description: "Plan for retirement",
+      detailedDescription: "Plan for retirement with confidence with our pension services designed to secure your financial future. Our pension experts will work with you to create a personalized retirement plan that meets your long-term goals and aspirations.",
       image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       features: ["Individual Pension", "Group Schemes", "Retirement Planning"]
     },
     { 
       title: "ASSET MANAGEMENT", 
       description: "Protect your investments",
+      detailedDescription: "Safeguard your valuable assets with our comprehensive management solutions. We provide specialized coverage for property, business assets, and investments to ensure your financial stability and long-term security.",
       image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       features: ["Property Insurance", "Business Assets", "Investment Protection"]
     },
     { 
       title: "WIBA", 
       description: "Workers' Injury Benefit Act",
+      detailedDescription: "As an employer, safeguard your employees against work-related injuries and illnesses. Our WIBA coverage provides compensation for medical expenses, lost wages, and disability benefits, helping you fulfill your legal obligations.",
       image: "https://images.unsplash.com/photo-1581093458797-660c5a1e50e6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       features: ["Workplace Coverage", "Injury Benefits", "Compliance Support"]
     },
     { 
       title: "DOMESTIC PACKAGE", 
       description: "Residential & Commercial",
+      detailedDescription: "Protect your home and belongings with our comprehensive domestic insurance packages. From property damage to theft and liability coverage, our policies offer peace of mind for homeowners and renters alike.",
       image: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       features: ["Home Insurance", "Contents Cover", "Commercial Property"]
     }
@@ -76,7 +98,7 @@ export default function AboutUs() {
           </p>
         </div>
 
-        {/* Our Goal Section */}
+        {/* Our Mission Section */}
         <div className="mb-24">
           <div className="bg-white/70 backdrop-blur-sm rounded-3xl shadow-xl border border-white/20 p-8 md:p-12 relative overflow-hidden">
             {/* Background Pattern */}
@@ -98,10 +120,13 @@ export default function AboutUs() {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div className="space-y-6">
                   <p className="text-lg text-gray-700 leading-relaxed">
-                    Our goal at Golden Point Insurance Agency is to ensure that the things that are most important to you are protected by the best insurers. With years of expertise and a dedication to quality, we provide customized insurance solutions to safeguard your family, investments and future to enhance your peace of mind.
+                    Our goal at Golden Point Insurance Agency is to protect the things that are most important to you. 
+                    With years of expertise and a dedication to quality, we provide specialized insurance solutions to 
+                    safeguard your investments and future.
                   </p>
                   <p className="text-lg text-gray-700 leading-relaxed">
-                    Our client focused methodology guarantees individualized attention and all inclusive assistance at every stage. With Golden Point Insurance Agency, all your insurance needs are taken care of.
+                    Our client-focused methodology guarantees individualized attention and all-inclusive assistance at every stage. 
+                    Put your trust in Golden Point Insurance Agency for the best protection available and peace of mind.
                   </p>
                   
                   <div className="flex flex-wrap gap-4 pt-4">
@@ -174,67 +199,79 @@ export default function AboutUs() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <div 
-                key={index}
-                className="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-amber-200 transform hover:-translate-y-2"
-              >
-                {/* Service Image */}
-                <div className="relative h-56 overflow-hidden">
-                  <img 
-                    src={service.image} 
-                    alt={service.title} 
-                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/20 to-transparent"></div>
-                  <div className="absolute top-4 right-4">
-                    <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center">
-                      <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                      </svg>
+            {services.map((service, index) => {
+              const coverPath = getCoverPath(service.title);
+              
+              return (
+                <div 
+                  key={index}
+                  className="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-amber-200 transform hover:-translate-y-2"
+                >
+                  {/* Service Image */}
+                  <div className="relative h-56 overflow-hidden">
+                    <img 
+                      src={service.image} 
+                      alt={service.title} 
+                      className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/20 to-transparent"></div>
+                    <div className="absolute top-4 right-4">
+                      <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center">
+                        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Service Content */}
+                  <div className="p-8">
+                    <div className="mb-6">
+                      <h3 className="text-xl font-black text-gray-900 mb-2">{service.title}</h3>
+                      <p className="text-gray-600 font-medium">{service.description}</p>
+                    </div>
+                    
+                    {/* Detailed Description */}
+                    <div className="mb-8">
+                      <p className="text-gray-700 text-sm leading-relaxed">{service.detailedDescription}</p>
+                    </div>
+                    
+                    {/* Features */}
+                    <div className="space-y-3 mb-8">
+                      {service.features.map((feature, idx) => (
+                        <div key={idx} className="flex items-center">
+                          <div className="w-5 h-5 bg-gradient-to-br from-amber-500 to-orange-600 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                            <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                            </svg>
+                          </div>
+                          <span className="text-gray-700 text-sm font-medium">{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+                    
+                    {/* Action Buttons */}
+                    <div className="flex gap-3">
+                      <Link 
+                        to={coverPath}
+                        className="flex-1 bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white px-4 py-3 rounded-xl font-bold text-sm transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center justify-center group"
+                      >
+                        Get Cover
+                        <svg className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                      </Link>
+                      
+                      <button className="px-4 py-3 border-2 border-amber-200 text-amber-700 hover:bg-amber-50 hover:border-amber-300 rounded-xl font-bold text-sm transition-all duration-300 flex items-center justify-center group">
+                        <svg className="w-4 h-4 transition-transform group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                      </button>
                     </div>
                   </div>
                 </div>
-                
-                {/* Service Content */}
-                <div className="p-8">
-                  <div className="mb-6">
-                    <h3 className="text-xl font-black text-gray-900 mb-2">{service.title}</h3>
-                    <p className="text-gray-600 font-medium">{service.description}</p>
-                  </div>
-                  
-                  {/* Features */}
-                  <div className="space-y-3 mb-8">
-                    {service.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-center">
-                        <div className="w-5 h-5 bg-gradient-to-br from-amber-500 to-orange-600 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                          <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                          </svg>
-                        </div>
-                        <span className="text-gray-700 text-sm font-medium">{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-                  
-                  {/* Action Buttons */}
-                  <div className="flex gap-3">
-                    <button className="flex-1 bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white px-4 py-3 rounded-xl font-bold text-sm transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center justify-center group">
-                      Get Cover
-                      <svg className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                      </svg>
-                    </button>
-                    
-                    <button className="px-4 py-3 border-2 border-amber-200 text-amber-700 hover:bg-amber-50 hover:border-amber-300 rounded-xl font-bold text-sm transition-all duration-300 flex items-center justify-center group">
-                      <svg className="w-4 h-4 transition-transform group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
         

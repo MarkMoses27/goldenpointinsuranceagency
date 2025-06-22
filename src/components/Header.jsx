@@ -122,7 +122,7 @@ export default function Header() {
         {/* Get A Quote */}
         <div className="hidden lg:flex items-center space-x-4">
           <Link
-            to="/quote"
+            to="/contact"
             className="bg-gradient-to-r from-amber-500 to-yellow-600 hover:from-amber-600 hover:to-yellow-700 text-white px-6 py-2 rounded-full font-semibold text-sm transition transform hover:scale-[1.02]"
           >
             GET A QUOTE
@@ -157,7 +157,7 @@ export default function Header() {
             <Link to="/contact" className="block py-2 text-gray-600 hover:text-gray-900" onClick={() => setMobileOpen(false)}>
               Contact
             </Link>
-            <Link to="/quote" className="block py-3 bg-amber-500 text-white rounded-lg text-center" onClick={() => setMobileOpen(false)}>
+            <Link to="/contact" className="block py-3 bg-amber-500 text-white rounded-lg text-center" onClick={() => setMobileOpen(false)}>
               GET A QUOTE
             </Link>
           </div>
