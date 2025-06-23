@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Logo from '../assets/logo.png';
 
-// Services and Partners data
+// Services data
 const services = [
   { name: 'Motor Insurance', path: '/motor' },
   { name: 'Health Insurance', path: '/health' },
@@ -12,16 +12,6 @@ const services = [
   { name: 'Domestic Package', path: '/domestic' },
   { name: 'Travel Insurance', path: '/travel' },
   { name: 'Pensions', path: '/pensions' },
-];
-
-const partners = [
-  { name: 'Jubilee Insurance', path: '/partners/jubilee' },
-  { name: 'AAR Insurance', path: '/partners/aar' },
-  { name: 'Resolution Insurance', path: '/partners/resolution' },
-  { name: 'Madison Insurance', path: '/partners/madison' },
-  { name: 'Britam Insurance', path: '/partners/britam' },
-  { name: 'CIC Insurance', path: '/partners/cic' },
-  { name: 'ICEA LION', path: '/partners/icea' },
 ];
 
 export default function Header() {
@@ -77,39 +67,10 @@ export default function Header() {
             </div>
           </div>
 
-          {/* Partners Dropdown */}
-          <div className="relative group">
-            <span className="cursor-pointer text-gray-600 hover:text-gray-900 transition">
-              Partners
-            </span>
-            <svg
-              className="w-4 h-4 ml-1 inline-block transition-transform duration-200 group-hover:rotate-180"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 9l-7 7-7-7" />
-            </svg>
-            <div className="invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-opacity duration-200 absolute top-full left-0 mt-3 bg-white rounded-xl shadow-xl border border-gray-100 w-64 z-50 overflow-hidden">
-              <div className="p-2">
-                <h3 className="px-4 py-2 text-xs font-semibold text-amber-700 uppercase tracking-wide border-b border-gray-100">
-                  Insurance Partners
-                </h3>
-                {partners.map((p) => (
-                  <Link
-                    key={p.path}
-                    to={p.path}
-                    className="flex justify-between px-4 py-3 rounded-lg hover:bg-gray-50 transition"
-                  >
-                    <span className="text-gray-700 font-medium">{p.name}</span>
-                    <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </Link>
-                ))}
-              </div>
-            </div>
-          </div>
+          {/* Our Clients Link */}
+          <Link to="/clients" className="text-gray-600 hover:text-gray-900 transition">
+            Our Clients
+          </Link>
 
           <Link to="/about" className="text-gray-600 hover:text-gray-900 transition">
             About
@@ -150,6 +111,9 @@ export default function Header() {
           <div className="px-6 py-4 space-y-3">
             <Link to="/" className="block py-2 text-gray-600 hover:text-gray-900" onClick={() => setMobileOpen(false)}>
               Home
+            </Link>
+            <Link to="/clients" className="block py-2 text-gray-600 hover:text-gray-900" onClick={() => setMobileOpen(false)}>
+              Our Clients
             </Link>
             <Link to="/about" className="block py-2 text-gray-600 hover:text-gray-900" onClick={() => setMobileOpen(false)}>
               About

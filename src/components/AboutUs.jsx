@@ -5,13 +5,13 @@ export default function AboutUs() {
   // Map service titles to route paths
   const getCoverPath = (title) => {
     const pathMap = {
-      "MOTOR INSURANCE": "/cover/motor",
-      "MEDICAL INSURANCE": "/cover/health",
-      "LIFE INSURANCE": "/cover/life",
-      "PENSIONS": "/cover/pensions",
-      "ASSET MANAGEMENT": "/cover/asset",
+      "MOTOR INSURANCE": "/motor",
+      "MEDICAL INSURANCE": "/health",
+      "LIFE INSURANCE": "/life",
+      "PENSIONS": "/pensions",
+      "ASSET MANAGEMENT": "/asset",
       "WIBA": "/cover/wiba",
-      "DOMESTIC PACKAGE": "/cover/domestic"
+      "DOMESTIC PACKAGE": "/domestic"
     };
     return pathMap[title] || "/cover";
   };
@@ -20,51 +20,51 @@ export default function AboutUs() {
     { 
       title: "MOTOR INSURANCE", 
       description: "Private & Commercial",
-      detailedDescription: "Hit the road with confidence knowing that your vehicle is protected with our reliable motor insurance policies. Whether you're driving for work or leisure, our coverage provides financial security against accidents, theft, and other unforeseen events.",
+      detailedDescription: "Comprehensive protection for all types of vehicles - from personal cars to commercial fleets. We provide customized solutions to safeguard your vehicles against accidents, theft, and third-party liabilities.",
       image: "https://images.unsplash.com/photo-1566478989037-eec170784d0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      features: ["Comprehensive Coverage", "Third Party Insurance", "Commercial Fleet"]
+      features: ["Comprehensive Coverage", "Third Party Insurance", "Commercial Fleet Protection"]
     },
     { 
       title: "MEDICAL INSURANCE", 
-      description: "Individual, SME & Corporates",
-      detailedDescription: "Health is wealth, and we believe in ensuring your well-being through our tailored medical insurance plans. From routine check-ups to unexpected medical emergencies, our comprehensive coverage offers financial protection for you and your loved ones.",
+      description: "Individual, SME & Corporate",
+      detailedDescription: "Tailored health coverage solutions for individuals, families, small businesses, and large corporations. Our plans ensure access to quality healthcare services nationwide.",
       image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      features: ["Family Plans", "Corporate Schemes", "Outpatient Cover"]
+      features: ["Inpatient & Outpatient", "Dental & Optical", "Maternity & Wellness"]
     },
     { 
       title: "LIFE INSURANCE", 
       description: "Secure your family's future",
-      detailedDescription: "Protect your loved ones and secure their future with our customizable life insurance solutions. Whether you're planning for your children's education, paying off debts, or leaving a legacy, our life insurance policies offer financial stability and peace of mind.",
+      detailedDescription: "Financial protection for your loved ones with customizable life insurance solutions. We offer plans that provide security through life's uncertainties.",
       image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      features: ["Term Life", "Whole Life", "Education Plans"]
+      features: ["Term Life Insurance", "Whole Life Plans", "Education & Endowment"]
     },
     { 
       title: "PENSIONS", 
-      description: "Plan for retirement",
-      detailedDescription: "Plan for retirement with confidence with our pension services designed to secure your financial future. Our pension experts will work with you to create a personalized retirement plan that meets your long-term goals and aspirations.",
+      description: "Retirement planning",
+      detailedDescription: "Secure your financial future with our retirement solutions. We help individuals and organizations create sustainable retirement plans.",
       image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      features: ["Individual Pension", "Group Schemes", "Retirement Planning"]
+      features: ["Individual Retirement Plans", "Employer Pension Schemes", "Retirement Advisory"]
     },
     { 
       title: "ASSET MANAGEMENT", 
       description: "Protect your investments",
-      detailedDescription: "Safeguard your valuable assets with our comprehensive management solutions. We provide specialized coverage for property, business assets, and investments to ensure your financial stability and long-term security.",
+      detailedDescription: "Comprehensive protection for your valuable assets including property, equipment, and business investments. We safeguard what matters most to your business.",
       image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      features: ["Property Insurance", "Business Assets", "Investment Protection"]
+      features: ["Property Insurance", "Business Interruption", "Equipment Breakdown"]
     },
     { 
       title: "WIBA", 
       description: "Workers' Injury Benefit Act",
-      detailedDescription: "As an employer, safeguard your employees against work-related injuries and illnesses. Our WIBA coverage provides compensation for medical expenses, lost wages, and disability benefits, helping you fulfill your legal obligations.",
+      detailedDescription: "Compliance with Kenyan labor laws through our WIBA coverage. We protect employees against work-related injuries and illnesses.",
       image: "https://images.unsplash.com/photo-1581093458797-660c5a1e50e6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      features: ["Workplace Coverage", "Injury Benefits", "Compliance Support"]
+      features: ["Work Injury Compensation", "Medical Expenses", "Disability Benefits"]
     },
     { 
       title: "DOMESTIC PACKAGE", 
       description: "Residential & Commercial",
-      detailedDescription: "Protect your home and belongings with our comprehensive domestic insurance packages. From property damage to theft and liability coverage, our policies offer peace of mind for homeowners and renters alike.",
+      detailedDescription: "All-in-one protection for homes and businesses. Our packages cover property damage, theft, and liability risks.",
       image: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      features: ["Home Insurance", "Contents Cover", "Commercial Property"]
+      features: ["Building & Contents", "Personal Liability", "Business Premises"]
     }
   ];
 
@@ -120,13 +120,13 @@ export default function AboutUs() {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div className="space-y-6">
                   <p className="text-lg text-gray-700 leading-relaxed">
-                    Our goal at Golden Point Insurance Agency is to protect the things that are most important to you. 
-                    With years of expertise and a dedication to quality, we provide specialized insurance solutions to 
-                    safeguard your investments and future.
+                    At Golden Point Insurance Agency, our mission is to ensure that the things that are most important to you 
+                    are protected by the best insurers. With 8 years of experience and dedication to quality, we provide 
+                    customized insurance solutions to safeguard your family, employees, investments and future.
                   </p>
                   <p className="text-lg text-gray-700 leading-relaxed">
                     Our client-focused methodology guarantees individualized attention and all-inclusive assistance at every stage. 
-                    Put your trust in Golden Point Insurance Agency for the best protection available and peace of mind.
+                    With Golden Point Insurance Agency, all your insurance needs are fully taken care of.
                   </p>
                   
                   <div className="flex flex-wrap gap-4 pt-4">
@@ -175,6 +175,50 @@ export default function AboutUs() {
                       </div>
                     </div>
                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Vision Section */}
+        <div className="mb-24">
+          <div className="bg-white/70 backdrop-blur-sm rounded-3xl shadow-xl border border-white/20 p-8 md:p-12 relative overflow-hidden">
+            {/* Background Pattern */}
+            <div className="absolute top-0 left-0 w-64 h-64 bg-gradient-to-br from-blue-100/30 to-purple-100/30 rounded-full blur-3xl -translate-y-32 -translate-x-32"></div>
+            <div className="absolute bottom-0 right-0 w-48 h-48 bg-gradient-to-tr from-amber-100/30 to-orange-100/30 rounded-full blur-3xl translate-y-24 translate-x-24"></div>
+            
+            <div className="relative z-10">
+              <div className="flex items-center mb-8">
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mr-4 shadow-lg">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                  </svg>
+                </div>
+                <h2 className="text-3xl md:text-4xl font-black text-gray-900">
+                  OUR <span className="text-blue-600">VISION</span>
+                </h2>
+              </div>
+              
+              <div className="space-y-6">
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  Our vision at Golden Point Insurance Agency is to become the most trusted insurance partner in Kenya, 
+                  recognized for our commitment to excellence and client satisfaction. We strive to continuously innovate 
+                  our services to meet the evolving needs of our clients while maintaining the highest standards of integrity.
+                </p>
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  We envision a future where every Kenyan family and business feels secure knowing their most valuable assets 
+                  are protected by comprehensive and reliable insurance solutions tailored to their unique circumstances.
+                </p>
+                
+                <div className="flex flex-wrap gap-4 pt-4">
+                  {['Industry Leadership', 'Client-Centric Innovation', 'Community Impact', 'Sustainable Growth'].map((feature, index) => (
+                    <div key={index} className="flex items-center bg-gradient-to-r from-blue-100 to-purple-100 px-4 py-2 rounded-full border border-blue-200/50">
+                      <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                      <span className="text-blue-800 font-semibold text-sm">{feature}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
@@ -306,37 +350,37 @@ export default function AboutUs() {
                 {[
                   {
                     icon: "shield",
-                    title: "Expert Guidance",
-                    description: "15+ years of insurance expertise to help you make informed decisions",
+                    title: "8+ Years Experience",
+                    description: "Over 8 years of providing reliable insurance solutions in Kenya",
                     gradient: "from-blue-400 to-blue-600"
                   },
                   {
                     icon: "users",
-                    title: "Personalized Service", 
-                    description: "Solutions tailored to your specific needs and circumstances",
+                    title: "Client-Focused Approach", 
+                    description: "Personalized attention and all-inclusive assistance at every stage",
                     gradient: "from-emerald-400 to-emerald-600"
                   },
                   {
-                    icon: "phone",
-                    title: "24/7 Support",
-                    description: "Always available to assist with claims and inquiries",
+                    icon: "star",
+                    title: "Top Insurer Partnerships",
+                    description: "Working with Kenya's leading insurance providers for the best coverage",
                     gradient: "from-purple-400 to-purple-600"
                   },
                   {
                     icon: "chart",
-                    title: "Trusted Partners",
-                    description: "Access to Kenya's leading insurance providers",
+                    title: "Comprehensive Solutions",
+                    description: "All your insurance needs fully taken care of in one place",
                     gradient: "from-pink-400 to-pink-600"
                   }
                 ].map((benefit, idx) => (
                   <div key={idx} className="group">
                     <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 shadow-xl hover:bg-white/15 transition-all duration-300 transform hover:-translate-y-1">
                       <div className="flex items-start">
-                        <div className={`bg-gradient-to-br from-amber-500 to-orange-600 rounded-2xl p-4 mr-6 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                        <div className={`bg-gradient-to-br ${benefit.gradient} rounded-2xl p-4 mr-6 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
                           <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             {benefit.icon === 'shield' && <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />}
                             {benefit.icon === 'users' && <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />}
-                            {benefit.icon === 'phone' && <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />}
+                            {benefit.icon === 'star' && <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />}
                             {benefit.icon === 'chart' && <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />}
                           </svg>
                         </div>
@@ -352,12 +396,15 @@ export default function AboutUs() {
               
               {/* CTA */}
               <div className="mt-16 text-center">
-                <button className="group inline-flex items-center bg-white text-orange-600 hover:bg-gray-50 px-10 py-4 rounded-2xl font-black text-lg transition-all duration-300 shadow-2xl hover:shadow-white/25 transform hover:-translate-y-1">
+                <a 
+                  href="/contact" 
+                  className="group inline-flex items-center bg-white text-orange-600 hover:bg-gray-50 px-10 py-4 rounded-2xl font-black text-lg transition-all duration-300 shadow-2xl hover:shadow-white/25 transform hover:-translate-y-1"
+                >
                   Get Your Free Quote Today
                   <svg className="w-6 h-6 ml-3 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                   </svg>
-                </button>
+                </a>
               </div>
             </div>
           </div>

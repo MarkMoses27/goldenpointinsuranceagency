@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { FaCar, FaShieldAlt, FaCheck, FaPhone, FaWhatsapp, FaEnvelope, FaChartLine, FaTools, FaHandHoldingUsd } from 'react-icons/fa';
+import { FaMotorcycle, FaShieldAlt, FaCheck, FaChartLine, FaTools, FaHandHoldingUsd } from 'react-icons/fa';
 
-const MotorInsurancePage = () => {
+const MotorcycleInsurancePage = () => {
   const [activeTab, setActiveTab] = useState('comprehensive');
 
   const coverageTypes = [
@@ -9,13 +9,13 @@ const MotorInsurancePage = () => {
       id: 'comprehensive',
       title: 'Comprehensive Coverage',
       icon: <FaShieldAlt />,
-      description: 'Complete protection for your vehicle against accidents, theft, fire, and third-party liability',
+      description: 'Complete protection for your motorcycle against accidents, theft, fire, and third-party liability',
       features: [
         'Accident damage repair',
         'Theft protection',
         'Fire damage coverage',
         'Third-party liability',
-        'Windscreen replacement',
+        'Helmet and riding gear coverage',
         '24/7 roadside assistance'
       ]
     },
@@ -39,17 +39,17 @@ const MotorInsurancePage = () => {
     {
       icon: <FaTools />,
       title: 'Nationwide Repair Network',
-      description: 'Access to 200+ trusted garages across Kenya'
+      description: 'Access to 100+ trusted motorcycle garages across Kenya'
     },
     {
       icon: <FaHandHoldingUsd />,
       title: 'Competitive Premiums',
-      description: 'Affordable rates tailored to your vehicle'
+      description: 'Affordable rates tailored to your motorcycle'
     },
     {
       icon: <FaCheck />,
       title: 'Fast Claims Processing',
-      description: 'Average claim settlement within 48 hours'
+      description: 'Average claim settlement within 48 hours for motorcycle incidents'
     }
   ];
 
@@ -60,25 +60,19 @@ const MotorInsurancePage = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-black/50 z-10"></div>
         <div 
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-4.0.3&auto=format&fit=crop&w=2400&q=80')" }}
+          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1558981403-c5f9899a28bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=2400&q=80')" }}
         ></div>
         
         <div className="relative z-20 h-full flex flex-col justify-center">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl">
               <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-                Motor Vehicle Insurance
+                Motorcycle Insurance
               </h1>
               <p className="text-xl text-amber-400 mb-8 max-w-xl">
-                Comprehensive protection for your vehicle on Kenyan roads
+                Comprehensive protection for your motorcycle on Kenyan roads
               </p>
               <div className="flex flex-wrap gap-4">
-                <a 
-                  href="#contact" 
-                  className="bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 px-8 rounded-lg transition-colors"
-                >
-                  Get Quote
-                </a>
                 <a 
                   href="#coverage" 
                   className="bg-transparent border-2 border-white text-white font-bold py-3 px-8 rounded-lg hover:bg-white/10 transition-colors"
@@ -96,7 +90,7 @@ const MotorInsurancePage = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-amber-400 mb-4">
-              Comprehensive Coverage Options
+              Motorcycle Coverage Options
             </h2>
             <div className="w-24 h-1 bg-amber-500 mx-auto mb-6"></div>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
@@ -144,15 +138,6 @@ const MotorInsurancePage = () => {
                         </div>
                       ))}
                     </div>
-                    
-                    <div className="mt-8 text-center">
-                      <a 
-                        href="#contact" 
-                        className="inline-block bg-amber-500 hover:bg-amber-600 text-white font-bold py-2 px-6 rounded-lg transition-colors"
-                      >
-                        Get {type.title} Quote
-                      </a>
-                    </div>
                   </div>
                 )
               ))}
@@ -167,7 +152,7 @@ const MotorInsurancePage = () => {
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-amber-400 mb-4">
-                Why Choose Our Motor Insurance?
+                Why Choose Our Motorcycle Insurance?
               </h2>
               <div className="w-24 h-1 bg-amber-500 mx-auto"></div>
             </div>
@@ -188,94 +173,24 @@ const MotorInsurancePage = () => {
               <div className="flex flex-col md:flex-row items-center gap-8">
                 <div className="md:w-1/3 flex justify-center">
                   <div className="text-amber-500 text-6xl">
-                    <FaCar />
+                    <FaMotorcycle />
                   </div>
                 </div>
                 <div className="md:w-2/3">
-                  <h3 className="text-2xl font-bold text-white mb-4">Claims Process</h3>
-                  <p className="text-gray-300 mb-6">
-                    Our dedicated motor claims team ensures quick assessment and settlement. With our 24/7 claims helpline, 
-                    assistance is just a phone call away, anytime, anywhere in Kenya.
+                  <h3 className="text-2xl font-bold text-white mb-4">Motorcycle Claims Process</h3>
+                  <p className="text-gray-300">
+                    Our dedicated motorcycle claims team ensures quick assessment and settlement. 
+                    With our 24/7 claims helpline, assistance is just a phone call away, anytime, 
+                    anywhere in Kenya for all your motorcycle insurance needs.
                   </p>
-                  <div className="flex flex-wrap gap-4">
-                    <a 
-                      href="#contact" 
-                      className="bg-amber-500 hover:bg-amber-600 text-white font-bold py-2 px-6 rounded-lg transition-colors"
-                    >
-                      Report a Claim
-                    </a>
-                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-
-      {/* Contact Section */}
-      <div id="contact" className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-amber-400 mb-4">
-                Get Your Motor Insurance Quote
-              </h2>
-              <div className="w-24 h-1 bg-amber-500 mx-auto"></div>
-              <p className="text-lg text-gray-300 max-w-2xl mx-auto mt-6">
-                Contact our specialists for a personalized quote today
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-blue-900/50 backdrop-blur-sm rounded-2xl p-6 text-center border border-amber-500/20">
-                <div className="text-amber-500 text-4xl mb-4">
-                  <FaPhone />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-3">Call Us</h3>
-                <p className="text-gray-300 mb-4">+254-727-964-113</p>
-                <a 
-                  href="tel:+254727964113" 
-                  className="inline-block bg-amber-500 hover:bg-amber-600 text-white py-2 px-4 rounded-lg transition-colors text-sm"
-                >
-                  Call Now
-                </a>
-              </div>
-              
-              <div className="bg-blue-900/50 backdrop-blur-sm rounded-2xl p-6 text-center border border-amber-500/20">
-                <div className="text-amber-500 text-4xl mb-4">
-                  <FaWhatsapp />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-3">WhatsApp</h3>
-                <p className="text-gray-300 mb-4">+254-727-964-113</p>
-                <a 
-                  href="https://wa.me/254727964113" 
-                  className="inline-block bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg transition-colors text-sm"
-                >
-                  Chat Now
-                </a>
-              </div>
-              
-              <div className="bg-blue-900/50 backdrop-blur-sm rounded-2xl p-6 text-center border border-amber-500/20">
-                <div className="text-amber-500 text-4xl mb-4">
-                  <FaEnvelope />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-3">Email</h3>
-                <p className="text-gray-300 mb-4">goldenpoint.ia@gmail.com</p>
-                <a 
-                  href="mailto:goldenpoint.ia@gmail.com" 
-                  className="inline-block bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-lg transition-colors text-sm"
-                >
-                  Send Email
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      
     </div>
   );
 };
 
-export default MotorInsurancePage;
+export default MotorcycleInsurancePage;

@@ -18,6 +18,7 @@ import ContactPage from './components/pages/ContactPage'
 import AboutPage from './components/pages/AboutPage'
 import Hero from './components/Hero'
 import AboutUs from './components/AboutUs'
+import OurClients from './components/pages/OurClients'
 export default function App() {
   return (
     <BrowserRouter>
@@ -40,6 +41,7 @@ export default function App() {
         <Route path="/domestic" element={<DomesticPackagePage />} />
         <Route path="/travel" element={<TravelInsurancePage />} />
         <Route path="/pensions" element={<PensionsPage />} />
+        <Route path="/clients" element={<OurClients />} />
 
         
         {/* Add more routes as needed */}
