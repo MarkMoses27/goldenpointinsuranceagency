@@ -1,1 +1,16 @@
 @import "tailwindcss";
+
+
+body {
+  font-family: 'Lora', serif;
+}
+
+h1, h2, h3, .header, .logo {
+  font-family: 'Lora', serif;
+  font-weight: 700; /* Bold weight for headings */
+}
+
+p, .content {
+  font-family: 'Lora', serif;
+  font-weight: 400; /* Regular weight for paragraphs */
+}

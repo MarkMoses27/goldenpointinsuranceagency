@@ -16,14 +16,32 @@ const services = [
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const [mediaOpen, setMediaOpen] = useState(false);
 
   return (
     <header className="bg-white border-b border-gray-100">
+      {/* Contact Info Bar with Black Background */}
+      <div className="bg-black text-white py-4 px-6 text-sm">
+        <div className="max-w-7xl mx-auto flex justify-between items-center">
+          {/* Contact Info (Horizontal and Centered) */}
+          <div className="flex space-x-8 w-full justify-center">
+            <div className="text-center">
+              <span className="block">Call Us: +254-727-964-113</span>
+            </div>
+            <div className="text-center">
+              <span className="block">Email: goldenpoint.ia@gmail.com</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Main Navigation Bar */}
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
         {/* Logo */}
         <Link to="/" className="flex items-center space-x-3">
           <div className="relative">
-            <img src={Logo} alt="Golden Point Insurance" className="w-16 h-16 object-contain" />
+            <img src={Logo} alt="Golden Point Insurance" className="w-24 h-24 object-contain" />
           </div>
           <span className="text-xl font-bold text-gray-900">
             Golden Point<span className="text-amber-600">.</span>
@@ -32,14 +50,19 @@ export default function Header() {
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center space-x-12">
-          <Link to="/" className="text-gray-600 hover:text-gray-900 transition">
-            Home
+          <Link to="/" className="text-gray-600 hover:text-gray-900 transition uppercase font-bold">
+            HOME
+          </Link>
+
+          {/* About Us Link */}
+          <Link to="/about" className="text-gray-600 hover:text-gray-900 transition uppercase font-bold">
+            ABOUT
           </Link>
 
           {/* Services Dropdown */}
           <div className="relative group">
-            <span className="cursor-pointer text-gray-600 hover:text-gray-900 transition">
-              Services
+            <span className="cursor-pointer text-gray-600 hover:text-gray-900 transition uppercase font-bold">
+              SERVICES
             </span>
             <svg
               className="w-4 h-4 ml-1 inline-block transition-transform duration-200 group-hover:rotate-180"
@@ -55,7 +78,7 @@ export default function Header() {
                   <Link
                     key={s.path}
                     to={s.path}
-                    className="flex justify-between px-4 py-3 rounded-lg hover:bg-gray-50 transition"
+                    className="flex justify-between px-4 py-3 rounded-lg hover:bg-gray-50 transition font-bold"
                   >
                     <span className="text-gray-700 font-medium">{s.name}</span>
                     <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -67,28 +90,46 @@ export default function Header() {
             </div>
           </div>
 
+          {/* Media Dropdown */}
+          <div className="relative group">
+            <span className="cursor-pointer text-gray-600 hover:text-gray-900 transition uppercase font-bold">
+              MEDIA
+            </span>
+            <svg
+              className="w-4 h-4 ml-1 inline-block transition-transform duration-200 group-hover:rotate-180"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 9l-7 7-7-7" />
+            </svg>
+            <div className="invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-opacity duration-200 absolute top-full left-0 mt-3 bg-white rounded-xl shadow-xl border border-gray-100 w-64 z-50 overflow-hidden">
+              <div className="p-2">
+                <Link
+                  to="/gallery"
+                  className="flex justify-between px-4 py-3 rounded-lg hover:bg-gray-50 transition font-bold"
+                >
+                  <span className="text-gray-700 font-medium">Gallery</span>
+                </Link>
+                <Link
+                  to="/blog"
+                  className="flex justify-between px-4 py-3 rounded-lg hover:bg-gray-50 transition font-bold"
+                >
+                  <span className="text-gray-700 font-medium">Blog</span>
+                </Link>
+              </div>
+            </div>
+          </div>
+
           {/* Our Clients Link */}
-          <Link to="/clients" className="text-gray-600 hover:text-gray-900 transition">
-            Our Clients
+          <Link to="/clients" className="text-gray-600 hover:text-gray-900 transition uppercase font-bold">
+            OUR CLIENTS
           </Link>
 
-          <Link to="/about" className="text-gray-600 hover:text-gray-900 transition">
-            About
-          </Link>
-          <Link to="/contact" className="text-gray-600 hover:text-gray-900 transition">
-            Contact
+          <Link to="/contact" className="text-gray-600 hover:text-gray-900 transition uppercase font-bold">
+            CONTACT
           </Link>
         </nav>
-
-        {/* Get A Quote */}
-        <div className="hidden lg:flex items-center space-x-4">
-          <Link
-            to="/contact"
-            className="bg-gradient-to-r from-amber-500 to-yellow-600 hover:from-amber-600 hover:to-yellow-700 text-white px-6 py-2 rounded-full font-semibold text-sm transition transform hover:scale-[1.02]"
-          >
-            GET A QUOTE
-          </Link>
-        </div>
 
         {/* Mobile Menu Button */}
         <button
@@ -109,20 +150,99 @@ export default function Header() {
       {mobileOpen && (
         <div className="lg:hidden bg-white border-t border-gray-100">
           <div className="px-6 py-4 space-y-3">
-            <Link to="/" className="block py-2 text-gray-600 hover:text-gray-900" onClick={() => setMobileOpen(false)}>
-              Home
+            <Link to="/" className="block py-2 text-gray-600 hover:text-gray-900 font-bold uppercase" onClick={() => setMobileOpen(false)}>
+              HOME
             </Link>
-            <Link to="/clients" className="block py-2 text-gray-600 hover:text-gray-900" onClick={() => setMobileOpen(false)}>
-              Our Clients
+            <Link to="/about" className="block py-2 text-gray-600 hover:text-gray-900 font-bold uppercase" onClick={() => setMobileOpen(false)}>
+              ABOUT
             </Link>
-            <Link to="/about" className="block py-2 text-gray-600 hover:text-gray-900" onClick={() => setMobileOpen(false)}>
-              About
+
+            {/* Services Dropdown on Mobile */}
+            <div className="relative">
+              <div
+                className="cursor-pointer text-gray-600 hover:text-gray-900 transition font-bold uppercase flex items-center justify-between py-2"
+                onClick={() => setServicesOpen(!servicesOpen)}
+              >
+                SERVICES
+                <svg
+                  className={`w-4 h-4 transition-transform duration-200 ${servicesOpen ? 'rotate-180' : ''}`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 9l-7 7-7-7" />
+                </svg>
+              </div>
+              {servicesOpen && (
+                <div className="mt-2 bg-gray-50 rounded-lg overflow-hidden">
+                  <div className="p-2">
+                    {services.map((s) => (
+                      <Link
+                        key={s.path}
+                        to={s.path}
+                        className="block px-4 py-3 rounded-lg hover:bg-white transition font-medium text-gray-700"
+                        onClick={() => {
+                          setMobileOpen(false);
+                          setServicesOpen(false);
+                        }}
+                      >
+                        {s.name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* Media Dropdown on Mobile */}
+            <div className="relative">
+              <div
+                className="cursor-pointer text-gray-600 hover:text-gray-900 transition font-bold uppercase flex items-center justify-between py-2"
+                onClick={() => setMediaOpen(!mediaOpen)}
+              >
+                MEDIA
+                <svg
+                  className={`w-4 h-4 transition-transform duration-200 ${mediaOpen ? 'rotate-180' : ''}`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 9l-7 7-7-7" />
+                </svg>
+              </div>
+              {mediaOpen && (
+                <div className="mt-2 bg-gray-50 rounded-lg overflow-hidden">
+                  <div className="p-2">
+                    <Link
+                      to="/gallery"
+                      className="block px-4 py-3 rounded-lg hover:bg-white transition font-medium text-gray-700"
+                      onClick={() => {
+                        setMobileOpen(false);
+                        setMediaOpen(false);
+                      }}
+                    >
+                      Gallery
+                    </Link>
+                    <Link
+                      to="/blog"
+                      className="block px-4 py-3 rounded-lg hover:bg-white transition font-medium text-gray-700"
+                      onClick={() => {
+                        setMobileOpen(false);
+                        setMediaOpen(false);
+                      }}
+                    >
+                      Blog
+                    </Link>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            <Link to="/clients" className="block py-2 text-gray-600 hover:text-gray-900 font-bold uppercase" onClick={() => setMobileOpen(false)}>
+              OUR CLIENTS
             </Link>
-            <Link to="/contact" className="block py-2 text-gray-600 hover:text-gray-900" onClick={() => setMobileOpen(false)}>
-              Contact
-            </Link>
-            <Link to="/contact" className="block py-3 bg-amber-500 text-white rounded-lg text-center" onClick={() => setMobileOpen(false)}>
-              GET A QUOTE
+            <Link to="/contact" className="block py-2 text-gray-600 hover:text-gray-900 font-bold uppercase" onClick={() => setMobileOpen(false)}>
+              CONTACT
             </Link>
           </div>
         </div>
