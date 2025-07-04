@@ -62,18 +62,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Insurers Section */}
-        <div className="mb-6 sm:mb-8">
-          <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-center text-amber-500">OUR INSURERS</h4>
-          <div className="flex flex-wrap justify-center gap-3 sm:gap-4 md:gap-6">
-            {['Jubilee', 'Britam', 'AAR', 'APA', 'Cannon', 'GAAP', 'Healthcare'].map((insurer) => (
-              <div key={insurer} className="px-3 sm:px-4 py-2 rounded-md text-sm sm:text-base" style={{backgroundColor: '#1e1e4a'}}>
-                {insurer}
-              </div>
-            ))}
-          </div>
-        </div>
-
         {/* Bottom Bar */}
         <div className="pt-4 sm:pt-6 flex flex-col md:flex-row justify-between items-center gap-3 sm:gap-0 text-sm sm:text-base" style={{borderTop: '1px solid #2d2d5a'}}>
           <div className="mb-0 text-center md:text-left" style={{color: '#a3a3c2'}}>

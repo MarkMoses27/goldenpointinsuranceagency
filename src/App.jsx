@@ -21,6 +21,7 @@ import OurClients from './components/pages/OurClients'
 import Hero from './components/Hero'
 import AboutUs from './components/AboutUs'
 import ServicesSection from './components/ServicesSection'
+import InsurerLogos from './components/InsurerLogos'
 
 export default function App() {
   return (
@@ -34,6 +35,7 @@ export default function App() {
             <Hero />
             <AboutUs />
             <ServicesSection />
+            <InsurerLogos />
           </>
         } />
         <Route path="/about" element={<AboutPage />} />

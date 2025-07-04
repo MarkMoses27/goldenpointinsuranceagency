@@ -2,9 +2,7 @@
 
 import { Link } from "react-router-dom";
 
-
-//images for services
-
+// Service images
 import motorImage from "../assets/motor-insurance.png"; 
 import healthImage from "../assets/health-insurance.png";
 import pensions from "../assets/pensions.png";
@@ -12,11 +10,10 @@ import life from "../assets/life-insurance.png";
 import WIBA from "../assets/wiba.png";
 import asset from "../assets/asset.png";
 import property from "../assets/property.png";
-import studentInsurance from "../assets/student-insurance.png"; // Updated import for student insurance
-import personalInsurance from "../assets/personal-accident.png"; // Updated import for personal accident cover
-import travelInsurance from "../assets/travel-insurance.png"; // Updated import for travel insurance
-import livestockInsurance from "../assets/livestock-insurance.png"; // Updated import for livestock insurance
-
+import studentInsurance from "../assets/student-insurance.png";
+import personalInsurance from "../assets/personal-accident.png";
+import travelInsurance from "../assets/travel-insurance.png";
+import livestockInsurance from "../assets/livestock-insurance.png";
 
 const services = [
   {
@@ -28,7 +25,7 @@ const services = [
       "PSV, Uber & Ride-hailing",
       "Flexible payment options"
     ],
-    image: motorImage, 
+    image: motorImage,
     link: "/motor"
   },
   {
@@ -169,13 +166,18 @@ export default function ServicesSection() {
         </div>
 
         {/* Services Grid */}
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service, idx) => (
-            <div key={idx} className="bg-white rounded-3xl shadow-xl border border-blue-900/10 flex flex-col h-full hover:shadow-2xl transition">
-              {/* Image */}
-              <div className="h-40 w-full rounded-t-3xl overflow-hidden">
-                <img src={service.image} alt={service.title}
-                  className="object-cover w-full h-full"
+            <div
+              key={idx}
+              className="bg-white rounded-3xl shadow-xl border border-blue-900/10 flex flex-col h-full hover:shadow-2xl transition"
+            >
+              {/* Responsive Image */}
+              <div className="relative w-full aspect-[4/3] rounded-t-3xl overflow-hidden bg-blue-50 flex items-center justify-center">
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="object-contain w-full h-full p-4"
                   loading="lazy"
                 />
               </div>
