@@ -7,7 +7,13 @@ import { Link } from "react-router-dom";
 
 import motorImage from "../assets/motor-insurance.png"; 
 import healthImage from "../assets/health-insurance.png";
-
+import pensions from "../assets/pensions.png";
+import life from "../assets/life-insurance.png";
+import WIBA from "../assets/wiba.png";
+import asset from "../assets/asset.png";
+import property from "../assets/property.png";
+import studentInsurance from "../assets/student-insurance.png"; // Updated import for student insurance
+import personalInsurance from "../assets/personal-accident.png"; // Updated import for personal accident cover
 
 const services = [
   {
@@ -41,7 +47,7 @@ const services = [
       "Investment Life Insurance",
       "Whole Life Cover"
     ],
-    image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+    image: life,
     link: "/life"
   },
   {
@@ -52,7 +58,7 @@ const services = [
       "Employer/Corporate Schemes",
       "Retirement Advisory"
     ],
-    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+    image: pensions,
     link: "/pensions"
   },
   {
@@ -63,7 +69,7 @@ const services = [
       "Annuity Solutions",
       "Bulk Investments"
     ],
-    image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+    image: asset,
     link: "/asset"
   },
   {
@@ -74,7 +80,7 @@ const services = [
       "Fire Insurance",
       "Personal & Business Premises"
     ],
-    image: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+    image: property,
     link: "/domestic"
   },
   {
@@ -85,7 +91,7 @@ const services = [
       "Medical Expenses",
       "Disability & Last Expense Cover"
     ],
-    image: "https://images.unsplash.com/photo-1581093458797-660c5a1e50e6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+    image: WIBA,
     link: "/cover/wiba"
   },
   {
@@ -129,7 +135,7 @@ const services = [
       "Accidental Death/Disability",
       "Family & Individual Plans"
     ],
-    image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+    image: personalInsurance,
     link: "/accident"
   },
   {
@@ -140,7 +146,7 @@ const services = [
       "Accident & Disability",
       "Covers School Activities"
     ],
-    image: "https://images.unsplash.com/photo-1464983953574-0892a716854b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+    image: studentInsurance,
     link: "/students"
   }
 ];
