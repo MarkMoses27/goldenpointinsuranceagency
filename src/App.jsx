@@ -1,6 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-  
-
+import ScrollToTop from './components/ScrollToTop'
 
 import Header from './components/Header'
 import Footer from './components/Footer'
@@ -16,12 +15,17 @@ import TravelInsurancePage from './components/pages/TravelInsurancePage'
 import PensionsPage from './components/pages/PensionsPage'
 import ContactPage from './components/pages/ContactPage'
 import AboutPage from './components/pages/AboutPage'
+import OurClients from './components/pages/OurClients'
+
+// Homepage sections
 import Hero from './components/Hero'
 import AboutUs from './components/AboutUs'
-import OurClients from './components/pages/OurClients'
+import ServicesSection from './components/ServicesSection'
+
 export default function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop /> {/* Ensures every route starts at the top */}
       <Header />
       <Routes>
         {/* Home Page */}
@@ -29,6 +33,7 @@ export default function App() {
           <>
             <Hero />
             <AboutUs />
+            <ServicesSection />
           </>
         } />
         <Route path="/about" element={<AboutPage />} />
@@ -42,12 +47,8 @@ export default function App() {
         <Route path="/travel" element={<TravelInsurancePage />} />
         <Route path="/pensions" element={<PensionsPage />} />
         <Route path="/clients" element={<OurClients />} />
-
-        
         {/* Add more routes as needed */}
       </Routes>
-      
-      {/* Footer */}
       <Footer />
     </BrowserRouter>
   )
