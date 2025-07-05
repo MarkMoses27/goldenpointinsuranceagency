@@ -84,183 +84,367 @@ const MotorPrivateCoverPage = () => {
   const [activeTab, setActiveTab] = useState("overview");
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-blue-100">
-      {/* HERO */}
-      <div className="relative bg-blue-950 z-10">
-        <div className="max-w-5xl mx-auto py-16 px-6 text-center relative z-10">
-          <h1 className="text-4xl md:text-5xl font-black text-amber-400 mb-3 drop-shadow-lg">
-            Motor Private Cover
-          </h1>
-          <p className="text-lg md:text-xl text-white/90 font-light mb-6 max-w-2xl mx-auto">
-            Protection for you, your car, and your peace of mind. Choose the best motor insurance in Kenya — comprehensive, flexible, and always here when you need us.
-          </p>
-        </div>
-        {/* subtle bg shapes */}
-        <div className="absolute inset-0 opacity-10 pointer-events-none z-0">
-          <div className="absolute -top-20 left-10 w-60 h-60 bg-amber-200 rounded-full filter blur-2xl"></div>
-          <div className="absolute bottom-0 right-0 w-40 h-40 bg-blue-700 rounded-full filter blur-xl"></div>
-        </div>
-      </div>
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-blue-100 w-full">
+      <style jsx>{`
+        /* Mobile First - Base styles for 320px+ */
+        .hero-container {
+          padding: 2rem 1rem;
+        }
+        
+        .hero-title {
+          font-size: 1.5rem;
+          line-height: 1.2;
+          margin-bottom: 0.75rem;
+        }
+        
+        .hero-subtitle {
+          font-size: 0.875rem;
+          line-height: 1.4;
+          margin-bottom: 1rem;
+        }
+        
+        .tab-container {
+          margin-top: -1.5rem;
+          margin-bottom: 1rem;
+          padding: 0 0.5rem;
+        }
+        
+        .tab-button {
+          padding: 0.5rem 0.75rem;
+          font-size: 0.75rem;
+          min-width: 80px;
+        }
+        
+        .main-content {
+          padding: 1rem;
+          margin-bottom: 2rem;
+        }
+        
+        .content-title {
+          font-size: 1.125rem;
+          margin-bottom: 0.75rem;
+        }
+        
+        .content-text {
+          font-size: 0.875rem;
+          line-height: 1.5;
+        }
+        
+        .cover-option {
+          padding: 1rem;
+          margin-bottom: 1.5rem;
+        }
+        
+        .cover-title {
+          font-size: 0.875rem;
+          margin-bottom: 0.5rem;
+        }
+        
+        .cover-list {
+          font-size: 0.75rem;
+          line-height: 1.4;
+        }
+        
+        .product-badge {
+          padding: 0.375rem 0.75rem;
+          font-size: 0.625rem;
+          margin: 0.25rem;
+        }
+        
+        .benefit-item {
+          padding: 0.75rem;
+          font-size: 0.75rem;
+          margin-bottom: 0.5rem;
+        }
+        
+        .cta-section {
+          padding: 1rem;
+          margin-bottom: 2rem;
+        }
+        
+        .cta-title {
+          font-size: 1.125rem;
+          margin-bottom: 0.5rem;
+        }
+        
+        .cta-text {
+          font-size: 0.75rem;
+          margin-bottom: 1rem;
+        }
+        
+        .cta-button {
+          padding: 0.75rem 1rem;
+          font-size: 0.875rem;
+          margin: 0.25rem;
+          display: block;
+          text-align: center;
+          width: 100%;
+        }
+        
+        .bg-shapes {
+          display: none;
+        }
 
-      {/* TABS */}
-      <div className="max-w-4xl mx-auto mt-[-36px] mb-8 px-4 relative z-20">
-        <div
-          className="flex justify-center gap-1 shadow rounded-xl bg-gradient-to-b from-gray-300 via-white to-blue-100 py-2"
-        >
-          {tabs.map(tab => (
-            <button
-              key={tab.id}
-              onClick={() => setActiveTab(tab.id)}
-              type="button"
-              className={`
-                px-6 py-2 rounded-lg font-bold transition
-                focus:outline-none cursor-pointer
-                ${
-                  activeTab === tab.id
-                    ? "bg-orange-500 text-white shadow"
-                    : "bg-transparent text-[#1a2763] hover:text-orange-600 hover:underline"
-                }
-              `}
-              style={{ fontFamily: "serif", userSelect: "none" }}
-            >
-              {tab.label}
-            </button>
-          ))}
-        </div>
-      </div>
+        /* Small Mobile - 375px+ */
+        @media (min-width: 375px) {
+          .hero-title {
+            font-size: 1.75rem;
+          }
+          
+          .hero-subtitle {
+            font-size: 1rem;
+          }
+          
+          .tab-button {
+            padding: 0.625rem 1rem;
+            font-size: 0.875rem;
+            min-width: 90px;
+          }
+          
+          .content-title {
+            font-size: 1.25rem;
+          }
+          
+          .cover-title {
+            font-size: 1rem;
+          }
+          
+          .cover-list {
+            font-size: 0.875rem;
+          }
+          
+          .product-badge {
+            font-size: 0.75rem;
+          }
+          
+          .benefit-item {
+            font-size: 0.875rem;
+          }
+          
+          .bg-shapes {
+            display: block;
+          }
+        }
 
-      {/* TAB CONTENT */}
-      <div className="max-w-4xl mx-auto bg-white rounded-3xl shadow-2xl p-8 md:p-12 mb-12 mt-4">
-        {activeTab === "overview" && (
-          <>
-            <h2 className="text-2xl font-bold text-blue-900 mb-4 text-center">
-              MOTOR PRIVATE COVER
-            </h2>
-            <p className="text-gray-800 mb-8 text-center">
-              Motor Private insurance protects you against loss if your car is involved in an accident, fire, theft, or causes third-party liability while on the road.
-            </p>
-            <h3 className="text-xl font-semibold text-amber-500 mb-6">
-              The main cover options include:
-            </h3>
+        /* Large Mobile - 425px+ */
+        @media (min-width: 425px) {
+          .hero-container {
+            padding: 2.5rem 1.5rem;
+          }
+          
+          .hero-title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+          }
+          
+          .hero-subtitle {
+            font-size: 1.125rem;
+            margin-bottom: 1.25rem;
+          }
+          
+          .tab-container {
+            margin-top: -2rem;
+            margin-bottom: 1.5rem;
+            padding: 0 1rem;
+          }
+          
+          .tab-button {
+            padding: 0.75rem 1.25rem;
+            font-size: 0.875rem;
+            min-width: 100px;
+          }
+          
+          .main-content {
+            padding: 1.5rem;
+          }
+          
+          .content-title {
+            font-size: 1.375rem;
+          }
+          
+          .content-text {
+            font-size: 1rem;
+          }
+          
+          .cover-option {
+            padding: 1.25rem;
+          }
+          
+          .cover-title {
+            font-size: 1.125rem;
+          }
+          
+          .product-badge {
+            padding: 0.5rem 1rem;
+            font-size: 0.875rem;
+          }
+          
+          .benefit-item {
+            padding: 1rem;
+            font-size: 0.875rem;
+          }
+          
+          .cta-section {
+            padding: 1.5rem;
+          }
+          
+          .cta-title {
+            font-size: 1.25rem;
+          }
+          
+          .cta-text {
+            font-size: 0.875rem;
+          }
+          
+          .cta-button {
+            padding: 0.875rem 1.25rem;
+            font-size: 0.875rem;
+            width: auto;
+            display: inline-block;
+          }
+        }
 
-            <div className="space-y-10">
-              {coverOptions.map((option, idx) => (
-                <div key={option.title} className="bg-blue-50/70 rounded-xl p-6 border border-amber-100">
-                  <h4 className="font-extrabold text-blue-900 text-lg mb-1">{option.title}</h4>
-                  <p className="text-gray-700 mb-2">{option.description}</p>
-                  <ol className="list-decimal list-inside ml-2 text-blue-900 mb-2">
-                    {option.features.map((f, i) => (
-                      <li key={i} className="pl-1">{f}</li>
-                    ))}
-                  </ol>
-                  {option.note && (
-                    <p className="text-xs italic text-blue-700 mt-1">{option.note}</p>
-                  )}
-                </div>
-              ))}
-            </div>
-          </>
-        )}
+        /* Tablet - 768px+ */
+        @media (min-width: 768px) {
+          .hero-container {
+            padding: 3rem 2rem;
+          }
+          
+          .hero-title {
+            font-size: 2.5rem;
+            margin-bottom: 1.25rem;
+          }
+          
+          .hero-subtitle {
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+          }
+          
+          .tab-container {
+            margin-top: -2.5rem;
+            margin-bottom: 2rem;
+            padding: 0 2rem;
+          }
+          
+          .tab-button {
+            padding: 0.875rem 1.5rem;
+            font-size: 1rem;
+            min-width: 120px;
+          }
+          
+          .main-content {
+            padding: 2rem 2.5rem;
+          }
+          
+          .content-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+          }
+          
+          .content-text {
+            font-size: 1rem;
+          }
+          
+          .cover-option {
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+          }
+          
+          .cover-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+          }
+          
+          .cover-list {
+            font-size: 1rem;
+          }
+          
+          .product-badge {
+            padding: 0.625rem 1.25rem;
+            font-size: 0.875rem;
+            margin: 0.375rem;
+          }
+          
+          .benefit-item {
+            padding: 1.25rem;
+            font-size: 1rem;
+          }
+          
+          .benefit-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+          }
+          
+          .benefits-list {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem 2rem;
+          }
+          
+          .cta-section {
+            padding: 2rem;
+          }
+          
+          .cta-title {
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+          }
+          
+          .cta-text {
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+          }
+          
+          .cta-button {
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            margin: 0 0.5rem;
+          }
+          
+          .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+          }
+          
+          .how-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+          }
+        }
 
-        {activeTab === "features" && (
-          <>
-            <h3 className="text-xl font-bold text-blue-900 mb-4 text-center">Our Main Products Include:</h3>
-            <div className="flex flex-wrap gap-2 justify-center mb-8">
-              {mainProducts.map((product, idx) => (
-                <div
-                  key={idx}
-                  className="bg-blue-100 text-blue-900 font-bold px-5 py-2 rounded-full border border-blue-200 text-sm"
-                >
-                  {product}
-                </div>
-              ))}
-            </div>
-            <h4 className="text-lg font-semibold text-amber-500 mb-3 text-center">
-              The cover provides the following benefits:
-            </h4>
-            <ol className="list-decimal list-inside text-gray-800 ml-2 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2">
-              {allBenefits.map((benefit, idx) => (
-                <li key={idx}>{benefit}</li>
-              ))}
-            </ol>
-          </>
-        )}
-
-        {activeTab === "benefits" && (
-          <>
-            <h3 className="text-xl font-bold text-blue-900 mb-4 text-center">
-              Why Choose Our Motor Private Insurance?
-            </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
-              {whyChooseUs.map((item, idx) => (
-                <div
-                  key={idx}
-                  className="flex items-center gap-3 bg-amber-50 px-5 py-4 rounded-xl shadow-sm border border-amber-200"
-                >
-                  <div className="w-2 h-2 bg-amber-500 rounded-full"></div>
-                  <div className="text-blue-950 font-semibold">{item}</div>
-                </div>
-              ))}
-            </div>
-          </>
-        )}
-
-        {activeTab === "how" && (
-          <>
-            <h3 className="text-xl font-bold text-blue-900 mb-4 text-center">
-              How Do I Start?
-            </h3>
-            <p className="text-gray-800 mb-4 text-center">
-              Want to know your insurance cost or get covered? Click <b>Get Cover</b> to get a quick quote and start your cover online.
-            </p>
-            <p className="text-gray-800 mb-6 text-center">
-              Need more info or help? Click <b>I Need Assistance</b> and our team will support you!
-            </p>
-            <div className="flex flex-col md:flex-row gap-4 justify-center mt-8">
-              <a
-                href="/get-cover"
-                className="bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 px-8 rounded-lg transition-colors"
-              >
-                Get Cover
-              </a>
-              <a
-                href="/contact"
-                className="bg-white border-2 border-amber-500 text-amber-500 font-bold py-3 px-8 rounded-lg hover:bg-amber-50 transition-colors"
-              >
-                I Need Assistance
-              </a>
-            </div>
-          </>
-        )}
-      </div>
-
-      {/* CTA */}
-      <div className="max-w-4xl mx-auto mb-16 px-4">
-        <div className="rounded-2xl bg-amber-400/90 p-8 text-center shadow-xl mt-10">
-          <h2 className="text-2xl md:text-3xl font-extrabold text-blue-950 mb-2">
-            Get Covered in Minutes
-          </h2>
-          <p className="text-blue-900 mb-6">
-            Protect your car and your peace of mind—get a custom quote or talk to our friendly insurance experts today!
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="/get-cover"
-              className="bg-blue-950 hover:bg-blue-800 text-white font-bold py-3 px-8 rounded-lg transition-colors"
-            >
-              Get a Quote
-            </a>
-            <a
-              href="/contact"
-              className="bg-white border-2 border-blue-950 text-blue-950 font-bold py-3 px-8 rounded-lg hover:bg-blue-50 transition-colors"
-            >
-              Contact Us
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default MotorPrivateCoverPage;
+        /* Large Tablet - 1024px+ */
+        @media (min-width: 1024px) {
+          .hero-container {
+            padding: 4rem 2rem;
+          }
+          
+          .hero-title {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+          }
+          
+          .hero-subtitle {
+            font-size: 1.375rem;
+            margin-bottom: 2rem;
+          }
+          
+          .tab-container {
+            margin-top: -3rem;
+            margin-bottom: 2.5rem;
+          }
+          
+          .tab-button {
+            padding: 1rem 2rem;
+            font-size: 1.125rem;
+            min-width: 140px;
+          }
+          
+          .main-content {
+            padding: 3rem 4rem;
+          }
+          
+          .content-title {
+            font-size: 1.75rem;
+            margin-bottom: 1.25rem;
+          }
