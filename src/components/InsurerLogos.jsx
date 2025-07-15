@@ -6,6 +6,10 @@ import Cannon from '../assets/cannon.png'
 import AAR from '../assets/AAR.png'
 import Pacis from '../assets/pacis.png'
 import CIC from '../assets/cic.png'
+import UAP from '../assets/uap.png'
+import kenindia from '../assets/kenindia.png'
+import oldmutual from '../assets/oldmutual.png'
+import jubilee_allianz from '../assets/jubilee-allianz.png'
 
 const insurers = [
   { name: "Jubilee Insurance", logo: Jubilee },
@@ -15,7 +19,11 @@ const insurers = [
   { name: "Cannon General", logo: Cannon },
   { name: "AAR Insurance", logo: AAR },
   { name: "Pacis Insurance", logo: Pacis },
-  { name: "CIC Group", logo: CIC }
+  { name: "CIC Group", logo: CIC },
+  { name: "UAP", logo: UAP },
+  { name: "Kenindia Assurance", logo: kenindia },
+  { name: "Old Mutual (Allianz)", logo: oldmutual },
+  { name: "Jubilee Allianz", logo: jubilee_allianz }
 ];
 
 export default function InsurerLogos() {
@@ -42,7 +50,7 @@ export default function InsurerLogos() {
               <img
                 src={insurer.logo}
                 alt={insurer.name}
-                className="h-12 object-contain transition-all duration-300 group-hover:drop-shadow-lg"
+                className="h-20 object-contain transition-all duration-300 group-hover:drop-shadow-lg"
                 loading="lazy"
               />
             </div>
