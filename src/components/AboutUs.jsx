@@ -1,4 +1,5 @@
 // components/AboutUsSection.jsx
+import Winfred from "../assets/winnie.png";
 
 import { Link } from "react-router-dom";
 
@@ -37,6 +38,7 @@ Thank you for considering Golden Point Insurance Agency as your trusted partner 
             <div className="md:col-span-1 flex justify-center">
               <div className="w-40 h-40 bg-gradient-to-br from-amber-400/90 to-amber-500 rounded-full flex items-center justify-center shadow-xl border-4 border-white">
                 <div className="w-36 h-36 bg-white rounded-full flex items-center justify-center">
+                  <img src={Winfred} alt="Winfred Kinyua" className="w-40 h-40 object-cover rounded-full" />
                   <svg className="w-16 h-16 text-blue-950" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
                   </svg>
@@ -46,9 +48,7 @@ Thank you for considering Golden Point Insurance Agency as your trusted partner 
             
             {/* Founder Info */}
             <div className="md:col-span-2 mt-8 md:mt-0">
-              <span className="inline-block uppercase text-xs font-bold tracking-widest text-amber-400 bg-white/10 px-3 py-1 rounded-full mb-3">
-                Founded in 2014
-              </span>
+             
               <h3 className="text-3xl md:text-4xl font-black mb-2 text-white">
                 Meet Winfred Kinyua
               </h3>
