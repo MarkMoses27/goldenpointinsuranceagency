@@ -16,6 +16,8 @@ import PensionsPage from './components/pages/PensionsPage'
 import ContactPage from './components/pages/ContactPage'
 import AboutPage from './components/pages/AboutPage'
 import OurClients from './components/pages/OurClients'
+import Gallery from './components/pages/media/Gallery'
+import Blog from './components/pages/media/Blog'
 
 // Homepage sections
 import Hero from './components/Hero'
@@ -49,6 +51,8 @@ export default function App() {
         <Route path="/travel" element={<TravelInsurancePage />} />
         <Route path="/pensions" element={<PensionsPage />} />
         <Route path="/clients" element={<OurClients />} />
+        <Route path="/media/gallery" element={<Gallery />} />
+        <Route path="/media/blog" element={<Blog />} />
       </Routes>
       <Footer />
     </BrowserRouter>

@@ -106,13 +106,13 @@ export default function Header() {
             <div className="invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-opacity duration-200 absolute top-full left-0 mt-3 bg-white rounded-xl shadow-xl border border-gray-100 w-64 z-50 overflow-hidden">
               <div className="p-2">
                 <Link
-                  to="/gallery"
+                  to="/media/gallery"
                   className="flex justify-between px-4 py-3 rounded-lg hover:bg-gray-50 transition font-bold"
                 >
                   <span className="text-gray-700 font-medium">Gallery</span>
                 </Link>
                 <Link
-                  to="/blog"
+                  to="/media/blog"
                   className="flex justify-between px-4 py-3 rounded-lg hover:bg-gray-50 transition font-bold"
                 >
                   <span className="text-gray-700 font-medium">Blog</span>
