@@ -48,31 +48,30 @@ const AboutPage = () => (
       </div>
       <div className="relative z-10 flex flex-col items-center justify-center text-center h-[38vw] max-h-[320px] px-4 py-6">
         <h1 className="text-white text-xl xs:text-2xl sm:text-4xl md:text-5xl font-bold leading-tight drop-shadow mb-2">About Golden Point Insurance</h1>
-        <p className="text-amber-400 text-base xs:text-lg sm:text-xl max-w-md mx-auto font-medium">Your trusted partner in protection and peace of mind since 2014</p>
+        <p className="text-amber-400 text-base xs:text-lg sm:text-xl max-w-md mx-auto font-medium">Your trusted partner in protection and peace of mind for ove 10 years</p>
       </div>
     </div>
 
-    {/* STORY */}
-    <section className="container mx-auto px-2 sm:px-4 py-7 sm:py-10">
-      <div className="bg-white/95 rounded-xl shadow-xl p-4 sm:p-8 flex flex-col md:flex-row items-center gap-5">
-        <div className="w-full md:w-1/3 flex justify-center mb-4 md:mb-0">
-          <div className="relative w-full max-w-[200px] aspect-square">
-            <div className="bg-gray-800 rounded-xl w-full h-full flex items-center justify-center">
-              <div className="bg-gray-200 border-2 border-dashed rounded-xl w-[85%] h-[85%]" />
-            </div>
-            <img src={winfred} alt="Winfred Kinyua" className="absolute inset-0 w-full h-full object-cover rounded-xl" />
-            <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-amber-500 text-white text-xs font-bold py-1 px-3 rounded-lg shadow-lg">
-              Winfred Kinyua
-            </div>
-          </div>
-        </div>
-        <div className="w-full md:w-2/3 text-gray-700 text-sm sm:text-base space-y-3">
-          <p>Founded by Winfred Kinyua, Golden Point Insurance Agency began with a clear mission: to provide Kenyans with reliable, affordable insurance solutions. For over a decade, we've grown into a trusted insurance agency serving thousands of clients nationwide.</p>
-          <p>With extensive industry experience, Winfred built Golden Point on principles of integrity, transparency, and personalized service. His vision has guided the company through economic challenges and technological innovations in the insurance sector.</p>
-          <p>Today, we're proud to offer a comprehensive range of insurance products while staying true to our core values of putting clients first and delivering exceptional service.</p>
-        </div>
+{/* STORY */}
+<section className="container mx-auto px-4 py-16">
+  <div className="bg-white rounded-lg shadow-lg p-8 md:p-12">
+    <div className="max-w-4xl mx-auto">
+      <div className="text-gray-900 text-base lg:text-lg leading-relaxed space-y-6">
+        <p>
+          Founded by <span className="font-semibold text-blue-600">Winfred Kinyua</span>, Golden Point Insurance Agency began with a clear mission: to ensure our clients enjoy total peace of mind and security by covering what matters most with the best insurers.
+        </p>
+        
+        <p>
+          With extensive industry experience, Winfred built Golden Point on principles of <span className="font-semibold text-orange-600">integrity, transparency, and personalized service</span>. His vision has guided the company through both economic challenges and technological innovations in the insurance sector.
+        </p>
+        
+        <p>
+          Today, we're proud to offer a comprehensive range of insurance products while staying true to our core values of <span className="font-semibold text-blue-600">putting clients first</span> and delivering exceptional service.
+        </p>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
     {/* STATS */}
     <section className="w-full py-7 bg-gradient-to-r from-amber-500 to-amber-600">
@@ -153,15 +152,14 @@ const AboutPage = () => (
       </div>
       <div className="bg-white/95 rounded-xl shadow-lg p-4 sm:p-6 flex flex-col md:flex-row items-center gap-5 max-w-2xl mx-auto">
         <div className="w-full md:w-1/3 flex justify-center mb-4 md:mb-0">
-          <div
-            className="bg-cover bg-center rounded-xl w-full max-w-[140px] aspect-square border-4 border-amber-500"
-            style={{ backgroundImage: "url('https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=987&q=80')" }}
-          />
+          <div className="relative w-40 h-40 bg-gradient-to-br from-amber-400/90 to-amber-500 rounded-full flex items-center justify-center shadow-xl border-4 border-white">
+            <img src={winfred} alt="Winfred Kinyua" className="w-36 h-36 object-cover rounded-full" />
+          </div>
         </div>
         <div className="w-full md:w-2/3 text-gray-700 text-xs sm:text-base space-y-2">
           <h3 className="text-base sm:text-xl font-bold text-gray-800">Winfred Kinyua</h3>
           <p className="text-amber-600 font-bold text-xs sm:text-base mb-1">CEO & Founder • 10+ Years Experience</p>
-          <p>With over a decade of experience in the insurance industry, Winfred Kinyua founded Golden Point Insurance in 2014 with a vision to create a client-centric insurance agency that prioritizes transparency and personalized service.</p>
+          <p>With over a decade of experience in the insurance industry, Winfred Kinyua founded Golden Point Insurance Agency with a vision to create a client-centric insurance agency that prioritizes transparency and personalized service.</p>
           <p>Under his leadership, Golden Point has grown to become a respected insurance agency, serving thousands of clients nationwide. Winfred's expertise spans all areas of insurance, with special focus on developing customized solutions for Kenyan businesses and families.</p>
           <div className="flex gap-3 mt-2">
             <a href="mailto:goldenpoint.ia@gmail.com" className="bg-blue-500 hover:bg-blue-600 text-white p-2 rounded-full">
