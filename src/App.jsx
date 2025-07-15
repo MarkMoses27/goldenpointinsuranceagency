@@ -26,7 +26,7 @@ import InsurerLogos from './components/InsurerLogos'
 export default function App() {
   return (
     <BrowserRouter>
-      <ScrollToTop /> {/* Ensures every route starts at the top */}
+      <ScrollToTop /> 
       <Header />
       <Routes>
         {/* Home Page */}
@@ -49,7 +49,6 @@ export default function App() {
         <Route path="/travel" element={<TravelInsurancePage />} />
         <Route path="/pensions" element={<PensionsPage />} />
         <Route path="/clients" element={<OurClients />} />
-        {/* Add more routes as needed */}
       </Routes>
       <Footer />
     </BrowserRouter>

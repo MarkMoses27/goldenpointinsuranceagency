@@ -13,7 +13,14 @@ export default function AboutUsSection() {
             Welcome to Golden Point Insurance Agency
           </h2>
           <p className="text-lg md:text-xl text-blue-950 font-light max-w-2xl mx-auto leading-relaxed">
-            Discover reliable insurance solutions and a team that genuinely cares about your peace of mind—every step of the way.
+          
+
+Welcome to Golden Point Insurance Agency, where your peace of mind is our priority. We are delighted to present our comprehensive insurance solutions tailored to meet the unique needs of both individuals and corporations. Our mission is to provide prompt and reliable services that ensure your most valuable assets are protected.
+
+With years of experience and a dedication to excellence, our team of experts is committed to delivering customized insurance solutions that safeguard your family, employees, investments, and future. We understand the importance of trust and integrity in our industry, and we strive to build lasting relationships with our clients based on these core values.
+
+Thank you for considering Golden Point Insurance Agency as your trusted partner in insurance. We look forward to serving you and meeting all your insurance needs with professionalism and care.
+
           </p>
         </div>
         
@@ -119,7 +126,7 @@ export default function AboutUsSection() {
           <div className="bg-blue-950 rounded-3xl p-8 shadow-lg border border-blue-900/40 flex flex-col items-center">
             <h4 className="text-amber-400 text-lg font-bold mb-3 uppercase tracking-wider">Our Mission</h4>
             <p className="text-white text-base leading-relaxed text-center">
-              At Golden Point Insurance Agency, our mission is to ensure that the things that are most important to you are protected by the best insurers. With over 10 years of experience and dedication to quality, we provide customized insurance solutions to safeguard your family, employees, investments, and future.
+              Our Mission at golden point insurance Agency is to ensure that our clients enjoy total peace of mind and security by ensuring that things that most important are covered by the best insurers.
             </p>
           </div>
           {/* Vision */}

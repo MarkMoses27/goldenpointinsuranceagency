@@ -448,3 +448,393 @@ const MotorPrivateCoverPage = () => {
             font-size: 1.75rem;
             margin-bottom: 1.25rem;
           }
+          
+          .content-text {
+            font-size: 1.125rem;
+          }
+          
+          .cover-option {
+            padding: 2rem;
+            margin-bottom: 2.5rem;
+          }
+          
+          .cover-title {
+            font-size: 1.375rem;
+            margin-bottom: 1rem;
+          }
+          
+          .cover-list {
+            font-size: 1.125rem;
+          }
+          
+          .product-badge {
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            margin: 0.5rem;
+          }
+          
+          .benefit-item {
+            padding: 1.5rem;
+            font-size: 1.125rem;
+          }
+          
+          .cta-section {
+            padding: 2.5rem;
+          }
+          
+          .cta-title {
+            font-size: 1.875rem;
+            margin-bottom: 1rem;
+          }
+          
+          .cta-text {
+            font-size: 1.125rem;
+            margin-bottom: 2rem;
+          }
+          
+          .cta-button {
+            padding: 1.125rem 2.5rem;
+            font-size: 1.125rem;
+          }
+        }
+
+        /* Desktop - 1280px+ */
+        @media (min-width: 1280px) {
+          .hero-container {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+          }
+          
+          .hero-title {
+            font-size: 3.5rem;
+          }
+          
+          .hero-subtitle {
+            font-size: 1.5rem;
+          }
+          
+          .tab-container {
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+          }
+          
+          .main-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 3rem 4rem;
+          }
+          
+          .content-title {
+            font-size: 2rem;
+          }
+          
+          .cover-title {
+            font-size: 1.5rem;
+          }
+          
+          .cta-section {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 3rem;
+          }
+          
+          .cta-title {
+            font-size: 2rem;
+          }
+        }
+
+        /* Large Desktop - 1440px+ */
+        @media (min-width: 1440px) {
+          .hero-container {
+            padding: 5rem 2rem;
+            max-width: 1400px;
+          }
+          
+          .hero-title {
+            font-size: 4rem;
+          }
+          
+          .hero-subtitle {
+            font-size: 1.625rem;
+          }
+          
+          .tab-container {
+            max-width: 1200px;
+          }
+          
+          .main-content {
+            max-width: 1200px;
+            padding: 4rem 5rem;
+          }
+          
+          .cta-section {
+            max-width: 1200px;
+            padding: 4rem;
+          }
+        }
+
+        /* Ultra Wide - 1920px+ */
+        @media (min-width: 1920px) {
+          .hero-container {
+            max-width: 1600px;
+            padding: 6rem 2rem;
+          }
+          
+          .hero-title {
+            font-size: 4.5rem;
+          }
+          
+          .hero-subtitle {
+            font-size: 1.75rem;
+          }
+          
+          .tab-container {
+            max-width: 1400px;
+          }
+          
+          .main-content {
+            max-width: 1400px;
+            padding: 5rem 6rem;
+          }
+          
+          .cta-section {
+            max-width: 1400px;
+            padding: 5rem;
+          }
+        }
+
+        /* Landscape Mobile */
+        @media (max-height: 500px) and (orientation: landscape) {
+          .hero-container {
+            padding: 1rem;
+          }
+          
+          .hero-title {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+          }
+          
+          .hero-subtitle {
+            font-size: 0.875rem;
+            margin-bottom: 0.75rem;
+          }
+          
+          .tab-container {
+            margin-top: -1rem;
+            margin-bottom: 1rem;
+          }
+          
+          .main-content {
+            padding: 1rem;
+          }
+        }
+
+        /* High DPI Displays */
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+          .hero-title {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+          }
+        }
+
+        /* Print Styles */
+        @media print {
+          .bg-gradient-to-br {
+            background: white !important;
+          }
+          
+          .hero-container {
+            background: white !important;
+            color: black !important;
+          }
+          
+          .tab-container {
+            display: none;
+          }
+          
+          .cta-section {
+            display: none;
+          }
+        }
+      `}</style>
+
+      {/* HERO */}
+      <div className="relative bg-blue-950">
+        <div className="hero-container relative z-10">
+          <h1 className="hero-title text-amber-400 font-black text-center drop-shadow-lg">
+            Motor Private Cover
+          </h1>
+          <p className="hero-subtitle text-white/90 font-light text-center max-w-2xl mx-auto">
+            Protection for you, your car, and your peace of mind. Choose the best motor insurance in Kenya — comprehensive, flexible, and always here when you need us.
+          </p>
+        </div>
+        {/* subtle bg shapes */}
+        <div className="bg-shapes absolute inset-0 opacity-10 pointer-events-none z-0">
+          <div className="absolute -top-16 left-10 w-32 h-32 sm:w-60 sm:h-60 bg-amber-200 rounded-full filter blur-2xl"></div>
+          <div className="absolute bottom-0 right-0 w-24 h-24 sm:w-40 sm:h-40 bg-blue-700 rounded-full filter blur-xl"></div>
+        </div>
+      </div>
+
+      {/* TABS */}
+      <div className="tab-container relative z-20">
+        <div
+          className="flex overflow-x-auto no-scrollbar whitespace-nowrap justify-start sm:justify-center gap-1 shadow rounded-xl bg-gradient-to-b from-gray-200 via-white to-blue-100 py-1.5 sm:py-2 px-2"
+          style={{ WebkitOverflowScrolling: "touch" }}
+        >
+          {tabs.map(tab => (
+            <button
+              key={tab.id}
+              onClick={() => setActiveTab(tab.id)}
+              type="button"
+              className={`
+                tab-button rounded-lg font-bold transition
+                focus:outline-none cursor-pointer
+                ${activeTab === tab.id
+                  ? "bg-orange-500 text-white shadow"
+                  : "bg-transparent text-[#1a2763] hover:text-orange-600 hover:underline"}
+              `}
+              style={{ fontFamily: "serif" }}
+            >
+              {tab.label}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* TAB CONTENT */}
+      <div className="main-content bg-white rounded-2xl sm:rounded-3xl shadow-2xl mt-4">
+        {activeTab === "overview" && (
+          <>
+            <h2 className="content-title font-bold text-blue-900 text-center">
+              MOTOR PRIVATE COVER
+            </h2>
+            <p className="content-text text-gray-800 mb-6 text-center">
+              Motor Private insurance protects you against loss if your car is involved in an accident, fire, theft, or causes third-party liability while on the road.
+            </p>
+            <h3 className="content-title font-semibold text-amber-500 text-center">
+              The main cover options include:
+            </h3>
+
+            <div className="space-y-7 sm:space-y-10">
+              {coverOptions.map((option, idx) => (
+                <div key={option.title} className="cover-option bg-blue-50/70 rounded-lg sm:rounded-xl border border-amber-100">
+                  <h4 className="cover-title font-extrabold text-blue-900">{option.title}</h4>
+                  <p className="content-text text-gray-700 mb-2">{option.description}</p>
+                  <ol className="cover-list list-decimal list-inside ml-2 text-blue-900 mb-2">
+                    {option.features.map((f, i) => (
+                      <li key={i} className="pl-1">{f}</li>
+                    ))}
+                  </ol>
+                  {option.note && (
+                    <p className="text-xs italic text-blue-700 mt-1">{option.note}</p>
+                  )}
+                </div>
+              ))}
+            </div>
+          </>
+        )}
+
+        {activeTab === "features" && (
+          <>
+            <h3 className="content-title font-bold text-blue-900 text-center">Our Main Products Include:</h3>
+            <div className="flex flex-wrap gap-2 justify-center mb-6">
+              {mainProducts.map((product, idx) => (
+                <div
+                  key={idx}
+                  className="product-badge bg-blue-100 text-blue-900 font-bold rounded-full border border-blue-200"
+                >
+                  {product}
+                </div>
+              ))}
+            </div>
+            <h4 className="content-title font-semibold text-amber-500 text-center">
+              The cover provides the following benefits:
+            </h4>
+            <ol className="benefits-list list-decimal list-inside text-gray-800 ml-2 grid grid-cols-1 gap-x-5 gap-y-1">
+              {allBenefits.map((benefit, idx) => (
+                <li key={idx} className="content-text">{benefit}</li>
+              ))}
+            </ol>
+          </>
+        )}
+
+        {activeTab === "benefits" && (
+          <>
+            <h3 className="content-title font-bold text-blue-900 text-center">
+              Why Choose Our Motor Private Insurance?
+            </h3>
+            <div className="benefit-grid grid grid-cols-1 gap-2 sm:gap-4 max-w-lg mx-auto">
+              {whyChooseUs.map((item, idx) => (
+                <div
+                  key={idx}
+                  className="benefit-item flex items-center gap-2 sm:gap-3 bg-amber-50 rounded-lg sm:rounded-xl shadow-sm border border-amber-200"
+                >
+                  <div className="w-2 h-2 bg-amber-500 rounded-full"></div>
+                  <div className="text-blue-950 font-semibold">{item}</div>
+                </div>
+              ))}
+            </div>
+          </>
+        )}
+
+        {activeTab === "how" && (
+          <>
+            <h3 className="content-title font-bold text-blue-900 text-center">
+              How Do I Start?
+            </h3>
+            <p className="content-text text-gray-800 mb-2 text-center">
+              Want to know your insurance cost or get covered? Click <b>Get Cover</b> to get a quick quote and start your cover online.
+            </p>
+            <p className="content-text text-gray-800 mb-5 text-center">
+              Need more info or help? Click <b>I Need Assistance</b> and our team will support you!
+            </p>
+            <div className="how-buttons flex flex-col md:flex-row gap-3 sm:gap-4 justify-center mt-5">
+              <a
+                href="/get-cover"
+                className="cta-button bg-amber-500 hover:bg-amber-600 text-white font-bold rounded-lg transition-colors"
+              >
+                Get Cover
+              </a>
+              <a
+                href="/contact"
+                className="cta-button bg-white border-2 border-amber-500 text-amber-500 font-bold rounded-lg hover:bg-amber-50 transition-colors"
+              >
+                I Need Assistance
+              </a>
+            </div>
+          </>
+        )}
+      </div>
+
+      {/* CTA */}
+      <div className="max-w-full sm:max-w-2xl md:max-w-4xl mx-auto px-2 sm:px-4">
+        <div className="cta-section rounded-xl sm:rounded-2xl bg-amber-400/90 text-center shadow-xl mt-7 sm:mt-10">
+          <h2 className="cta-title font-extrabold text-blue-950">
+            Get Covered in Minutes
+          </h2>
+          <p className="cta-text text-blue-900">
+            Protect your car and your peace of mind—get a custom quote or talk to our friendly insurance experts today!
+          </p>
+          <div className="cta-buttons flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+            <a
+              href="/get-cover"
+              className="cta-button bg-blue-950 hover:bg-blue-800 text-white font-bold rounded-lg transition-colors"
+            >
+              Get a Quote
+            </a>
+            <a
+              href="/contact"
+              className="cta-button bg-white border-2 border-blue-950 text-blue-950 font-bold rounded-lg hover:bg-blue-50 transition-colors"
+            >
+              Contact Us
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default MotorPrivateCoverPage;

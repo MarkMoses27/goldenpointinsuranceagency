@@ -1,4 +1,4 @@
-import React from 'react';
+import  winfred from '../../assets/winnie.png';
 import {
   FaShieldAlt,
   FaUsers,
@@ -60,13 +60,14 @@ const AboutPage = () => (
             <div className="bg-gray-800 rounded-xl w-full h-full flex items-center justify-center">
               <div className="bg-gray-200 border-2 border-dashed rounded-xl w-[85%] h-[85%]" />
             </div>
+            <img src={winfred} alt="Winfred Kinyua" className="absolute inset-0 w-full h-full object-cover rounded-xl" />
             <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-amber-500 text-white text-xs font-bold py-1 px-3 rounded-lg shadow-lg">
               Winfred Kinyua
             </div>
           </div>
         </div>
         <div className="w-full md:w-2/3 text-gray-700 text-sm sm:text-base space-y-3">
-          <p>Founded in 2014 by Winfred Kinyua, Golden Point Insurance Agency began with a clear mission: to provide Kenyans with reliable, affordable insurance solutions. For over a decade, we've grown into a trusted insurance agency serving thousands of clients nationwide.</p>
+          <p>Founded by Winfred Kinyua, Golden Point Insurance Agency began with a clear mission: to provide Kenyans with reliable, affordable insurance solutions. For over a decade, we've grown into a trusted insurance agency serving thousands of clients nationwide.</p>
           <p>With extensive industry experience, Winfred built Golden Point on principles of integrity, transparency, and personalized service. His vision has guided the company through economic challenges and technological innovations in the insurance sector.</p>
           <p>Today, we're proud to offer a comprehensive range of insurance products while staying true to our core values of putting clients first and delivering exceptional service.</p>
         </div>
@@ -93,7 +94,7 @@ const AboutPage = () => (
             <FaLightbulb />
           </div>
           <h3 className="text-base sm:text-xl font-bold text-gray-800 mb-2">Our Mission</h3>
-          <p className="text-gray-700 text-sm sm:text-base">To empower individuals and businesses across Kenya with comprehensive insurance solutions that provide financial security and peace of mind. We strive to make insurance accessible, understandable, and responsive to our clients' evolving needs.</p>
+          <p className="text-gray-700 text-sm sm:text-base">Our Mission at golden point insurance Agency is to ensure that our clients enjoy total peace of mind and security by ensuring that things that most important are covered by the best insurers.</p>
         </div>
         <div className="bg-white/95 rounded-xl shadow-lg p-4 sm:p-6 flex flex-col items-center text-center">
           <div className="text-amber-500 text-3xl sm:text-4xl mb-2">
